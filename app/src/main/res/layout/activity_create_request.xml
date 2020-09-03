@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.createrequest.CreateRequestActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.createrequest.CreateRequestViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="5dp">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar"
+                android:background="@color/white"
+                app:subtitleTextColor="@color/black"
+                app:title="@string/title_create_request"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                app:titleTextColor="@color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/create_request_question"
+            android:textSize="@dimen/scale_18" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/requestPolicies"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:paddingLeft="@dimen/scale_8_dim"
+            android:paddingRight="@dimen/scale_8_dim"
+            tools:listitem="@layout/item_create_request_view" />
+    </LinearLayout>
+</layout>

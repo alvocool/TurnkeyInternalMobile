@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.confirmclaimdetails.ConfirmClaimDetailsActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.confirmclaimdetails.ConfirmClaimDetailsViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar"
+                android:background="@color/white"
+                app:subtitleTextColor="@color/black"
+                app:title="@string/title_activity_confirm_claim_details"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                app:titleTextColor="@color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1">
+            <TextView
+                android:id="@+id/insurerTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/insurancePolicy"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/insurer"
+                style="@style/TextAppearance.Text.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@{viewModel.insurer}"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/coverType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:text="@{viewModel.coverType}"
+                android:textColor="@color/text_black"
+                android:textSize="14sp" />
+
+
+
+            <TextView
+                android:id="@+id/polNoTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/policy_number"
+                android:textColor="@color/gray"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/polNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@{viewModel.polNo}"
+                android:textColor="@color/text_black"
+                android:textSize="14sp"/>
+
+
+            <TextView
+                android:id="@+id/vehicleTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/vehiclePlate"
+                android:textColor="@color/gray"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/vehicle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@{viewModel.vehicle}"
+                android:textColor="@color/text_black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/incidentDateTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/incident_date"
+                android:textColor="@color/gray"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/incidentDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@{viewModel.incidentDate}"
+                android:textColor="@color/text_black"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/descriptionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/incident_description"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constrainedWidth="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@{viewModel.description}"
+                android:textColor="@color/text_black"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/incidentPhotos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/picsOfDamage"
+                android:textColor="@color/gray"
+                android:textSize="12sp" />
+            
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:id="@+id/incidentPicWrapper"
+                android:layout_marginTop="@dimen/scale_10_dim"
+                android:layout_marginStart="@dimen/scale_16_dim"
+                android:layout_marginLeft="@dimen/scale_16_dim">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:id="@+id/damagePic1"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="@string/picturedamages" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:id="@+id/damagePic2"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="@string/picturedamages"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:id="@+id/damagePic3"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginEnd="4dp"
+                    android:contentDescription="@string/picturedamages"/>
+                
+            </LinearLayout>
+
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/submitClaimsDisclaimer"
+            android:textSize="@dimen/scale_12"
+            android:id="@+id/acceptDetails"
+            android:textColor="@color/gray"
+            android:layout_marginTop="@dimen/scale_16_dim"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginBottom="@dimen/scale_16_dim"
+            android:layout_marginEnd="@dimen/scale_16_dim"/>
+        </LinearLayout>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/register_btn"
+            style="@style/turnKeyButton.Style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:onClick="@{() -> viewModel.submitClaim()}"
+            android:paddingTop="@dimen/scale_16_dim"
+            android:filterTouchesWhenObscured="true"
+            android:layout_marginTop="@dimen/scale_16_dim"
+            android:layout_marginBottom="@dimen/scale_16_dim"
+            android:paddingBottom="@dimen/scale_16_dim"
+            android:text="@string/claimSubmit"
+            android:textColor="@color/colorlight" />
+
+    </LinearLayout>
+
+
+
+    </ScrollView>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.vehicleinsurance.extensionsdialog.ExtensionsDialogViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/scale_10_dim"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/scale_80_dim"
+                android:paddingLeft="@dimen/scale_16_dim"
+                android:paddingRight="@dimen/scale_16_dim"
+                android:paddingTop="@dimen/scale_16_dim">
+
+
+                <TextView
+                    android:id="@+id/benefitsLimitHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/scale_20_dim"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/scale_20"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/extensionLimit_InputLayout"
+                    style="@style/turnKeyInput.Style"
+                    android:theme="@style/turnKeyInput.Theme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorIconDrawable="@null"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/extensionLimit"
+                        android:inputType="number"
+                        android:hint="@string/benefit_limit"
+                        android:textSize="@dimen/scale_15"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/scale_5_dim"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <TextView
+                    android:id="@+id/benefitsLimitDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/scale_5_dim"
+                    android:textSize="@dimen/scale_12"/>
+
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="@dimen/scale_25_dim"
+                >
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLater"
+                    style="@style/turnKeyTextButton.Style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/scale_12_dim"
+                    android:text="@string/cancel"
+                    android:onClick="@{() -> viewModel.close()}"
+                    android:filterTouchesWhenObscured="true"/>
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSubmit"
+                    style="@style/turnKeyTextButton.Style"
+                    android:onClick="@{() -> viewModel.setLimit()}"
+                    android:filterTouchesWhenObscured="true"
+                    android:text="@string/ok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="@dimen/scale_90_dim"
+                    android:layout_marginEnd="@dimen/scale_90_dim"
+                    android:padding="@dimen/scale_12_dim" />
+
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</layout>

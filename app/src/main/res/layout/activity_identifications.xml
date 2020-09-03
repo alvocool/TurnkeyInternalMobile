@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.identification.IdentificationsActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.identification.IdentificationsViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/identificationLayoutBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="@dimen/scale_5_dim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar"
+                android:background="@color/white"
+                app:subtitleTextColor="@color/black"
+                app:title="@string/title_activity_identifications"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                app:titleTextColor="@color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/Q1_quote_step2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/Q1_quote_step2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/kraPin_InputLayout"
+            style="@style/turnKeyInput.Style"
+            android:theme="@style/turnKeyInput.Theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/Upload_id_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Q1_quote_step2"
+            app:layout_constraintVertical_bias="0.0"
+            app:helperText="@string/customer_kra_pin_hint"
+            app:errorTextAppearance="@style/error_appearance">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/KraPin_Input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cursorVisible="true"
+                android:hint="@string/customer_kra_pin"
+                android:inputType="textCapCharacters"
+                android:maxLength="11"
+                android:paddingTop="@dimen/scale_14_dim"
+                android:paddingBottom="@dimen/scale_14_dim"
+                android:textColor="@color/colordark"
+                android:textColorHint="@color/colordark"
+                android:textSize="@dimen/scale_15" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/identifications_InputLayout"
+            style="@style/turnKeyInput.Style"
+            android:theme="@style/turnKeyInput.Theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kraPin_InputLayout"
+            app:errorTextAppearance="@style/error_appearance">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/identifications_Input"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cursorVisible="true"
+                android:hint="@string/customer_id_number"
+                android:inputType="number"
+                android:maxLength="15"
+                android:paddingTop="@dimen/scale_14_dim"
+                android:paddingBottom="@dimen/scale_14_dim"
+                android:textColor="@color/colordark"
+                android:textColorHint="@color/colordark"
+                android:textSize="@dimen/scale_15" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageButton
+            android:id="@+id/Upload_id_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scale_200_dim"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/Upload_id_info"
+            android:onClick="@{() -> viewModel.showPictureOptions()}"
+            android:filterTouchesWhenObscured="true"
+            android:background="@drawable/imageviewpadding"
+            android:scaleType="centerInside"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/identifications_InputLayout"
+            app:srcCompat="@drawable/picbg" />
+
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/turnKeyButton.Style"
+            android:id="@+id/Q1_quote_step1btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:onClick="@{() -> viewModel.nextStep()}"
+            android:filterTouchesWhenObscured="true"
+            android:paddingTop="@dimen/scale_15_dim"
+            android:paddingBottom="@dimen/scale_15_dim"
+            android:text="@string/proceed_payment"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Upload_id_button"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/Upload_id_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> viewModel.showPictureOptions()}"
+            android:filterTouchesWhenObscured="true"
+            android:text="@string/Upload_id_info"
+            app:layout_constraintBottom_toBottomOf="@+id/Upload_id_button"
+            app:layout_constraintEnd_toEndOf="@+id/Upload_id_button"
+            app:layout_constraintStart_toStartOf="@+id/Upload_id_button"
+            app:layout_constraintTop_toTopOf="@+id/Upload_id_button"
+            app:layout_constraintVertical_bias="0.76" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/removePicture"
+            style="@style/Widget.MaterialComponents.Chip.Entry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> viewModel.removePicture()}"
+            android:filterTouchesWhenObscured="true"
+            android:text="@string/remove"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/Upload_id_button"
+            app:layout_constraintEnd_toEndOf="@+id/Upload_id_button"
+            app:layout_constraintStart_toStartOf="@+id/Upload_id_button"
+            app:layout_constraintTop_toTopOf="@+id/Upload_id_button"
+            app:layout_constraintVertical_bias="0.82" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:id="@+id/identificationBottomNav"
+            android:clickable="true"
+            android:background="@color/translucent_black"
+            android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            app:behavior_hideable="true"
+            app:behavior_peekHeight="@dimen/scale_80_dim"
+            app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+            app:layout_constraintVertical_bias="1.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/black"
+                android:dividerPadding="@dimen/scale_5_dim"
+                android:orientation="vertical"
+                android:showDividers="middle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/takePhoto"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:onClick="@{() -> viewModel.takePhoto()}"
+                    android:filterTouchesWhenObscured="true"
+                    android:padding="@dimen/scale_16_dim"
+                    android:text="@string/takePhoto"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/choosePhoto"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:filterTouchesWhenObscured="true"
+                    android:onClick="@{() -> viewModel.choosePhoto()}"
+                    android:padding="@dimen/scale_16_dim"
+                    android:text="@string/choosePhoto"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    </LinearLayout>
+</layout>

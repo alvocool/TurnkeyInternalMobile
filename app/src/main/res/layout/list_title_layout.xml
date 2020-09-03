@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/scale_16_dim"
+    android:paddingStart="@dimen/scale_16_dim"
+    android:paddingRight="@dimen/scale_16_dim"
+    android:paddingEnd="@dimen/scale_16_dim"
+    android:paddingLeft="@dimen/scale_16_dim"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/itemTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textAppearance="@style/TextAppearance.Text.Medium"
+        android:divider="@color/dividerColor"
+         />
+    <View
+        android:layout_width="match_parent"
+        android:id="@+id/itemTitleUnderline"
+        android:layout_height="@dimen/scale_1_dim"
+        android:layout_marginTop="@dimen/scale_2_dim"
+        android:background="@color/dash_gray"/>
+</LinearLayout>

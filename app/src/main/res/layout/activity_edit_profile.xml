@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.editprofile.EditProfileActivity">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.editprofile.EditProfileViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="@dimen/scale_5_dim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar"
+                android:background="@color/white"
+                app:subtitleTextColor="@color/black"
+                app:title="@string/title_activity_edit_profile"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                app:titleTextColor="@color/black" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/turnKeyButton.Style"
+                android:id="@+id/editProfileNavButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:onClick="@{() -> viewModel.updateProfile()}"
+                android:filterTouchesWhenObscured="true"
+                android:padding="@dimen/scale_12_dim"
+                android:text="@string/save"
+                android:textSize="@dimen/scale_16"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/customer_email_EditInputLayout"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <TextView
+                android:id="@+id/personalDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="@string/personalDetails"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customer_first_name_EditInputLayout"
+                style="@style/turnKeyInput.Style"
+                android:theme="@style/turnKeyInput.Theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@style/error_appearance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/personalDetails">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customer_edit_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cursorVisible="true"
+                    android:hint="@string/customer_first_name"
+                    android:inputType="text"
+                    android:paddingTop="@dimen/scale_16_dim"
+                    android:paddingBottom="@dimen/scale_16_dim"
+                    android:text="@{viewModel.clientFirstName}"
+                    android:textColor="@color/colordark"
+                    android:textColorHint="@color/colordark"
+                    android:textSize="@dimen/scale_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customer_second_name_EditInputLayout"
+                style="@style/turnKeyInput.Style"
+                android:theme="@style/turnKeyInput.Theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/customer_first_name_EditInputLayout"
+                app:errorTextAppearance="@style/error_appearance">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customer_edit_second_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cursorVisible="true"
+                    android:hint="@string/customer_surname"
+                    android:inputType="text"
+                    android:paddingTop="@dimen/scale_16_dim"
+                    android:paddingBottom="@dimen/scale_16_dim"
+                    android:text="@{viewModel.clientSurname}"
+                    android:textColor="@color/colordark"
+                    android:textColorHint="@color/colordark"
+                    android:textSize="@dimen/scale_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customer_mobile_no_EditInputLayout"
+                style="@style/turnKeyInput.Style"
+                android:theme="@style/turnKeyInput.Theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/customer_second_name_EditInputLayout"
+                app:errorTextAppearance="@style/error_appearance">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customer_edit_mobile_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cursorVisible="true"
+                    android:hint="@string/customer_mobile_no"
+                    android:inputType="text"
+                    android:enabled="false"
+                    android:focusable="false"
+                    android:paddingTop="@dimen/scale_16_dim"
+                    android:paddingBottom="@dimen/scale_16_dim"
+                    android:text="@{viewModel.clientNumber}"
+                    android:textColor="@color/colordark"
+                    android:textColorHint="@color/colordark"
+                    android:textSize="@dimen/scale_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/customer_email_EditInputLayout"
+                style="@style/turnKeyInput.Style"
+                android:theme="@style/turnKeyInput.Theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/customer_mobile_no_EditInputLayout"
+                app:errorTextAppearance="@style/error_appearance">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/customer_edit_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cursorVisible="true"
+                    android:hint="@string/email"
+                    android:inputType="text"
+                    android:paddingTop="@dimen/scale_16_dim"
+                    android:paddingBottom="@dimen/scale_16_dim"
+                    android:text="@{viewModel.clientEmail}"
+                    android:textColor="@color/colordark"
+                    android:textColorHint="@color/colordark"
+                    android:textSize="@dimen/scale_16" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    </LinearLayout>
+</layout>

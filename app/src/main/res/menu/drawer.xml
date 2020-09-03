@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+            <item
+                android:id="@+id/navItemHome"
+                android:title="@string/navItemHome"
+
+                />
+
+            <item
+                android:id="@+id/navItemInsuranceProducts"
+                android:title="@string/navItemInsuranceProducts"
+                android:padding="@dimen/scale_24_dim"/>
+
+            <item
+                android:id="@+id/navItemServiceRequest"
+                android:title="@string/navItemServiceRequest"
+                android:padding="@dimen/scale_24_dim"/>
+
+            <item
+                android:id="@+id/navItemContactUs"
+                android:title="@string/navItemContactUs"
+                android:padding="@dimen/scale_24_dim"/>
+             <item
+                android:id="@+id/navItemLogout"
+                android:checked="true"
+                android:title="@string/logout"
+                 />
+
+</menu>
+

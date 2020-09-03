@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/scale_24_dim"
+        android:layout_marginEnd="@dimen/scale_24_dim">
+
+        <RelativeLayout
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/iconNotification"
+                android:layout_width="17dp"
+                android:layout_height="20dp"
+                android:contentDescription="@string/notifications"
+                app:srcCompat="@drawable/noun_notification" />
+
+            <TextView
+                android:id="@+id/notificationCount"
+                style="@style/TextAppearance.Text.Medium"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignTop="@id/iconNotification"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/circularbg"
+                android:gravity="center_horizontal|center_vertical"
+                android:textColor="#FFF"
+                android:textSize="7sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                tools:ignore="SmallSp" />
+        </RelativeLayout>
+
+    </RelativeLayout>

@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.enterrequestdetails.EnterServiceRequestDetailsActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.enterrequestdetails.EnterServiceRequestDetailsViewModel" />
+
+    </data>
+
+
+ <FrameLayout
+     android:layout_width="match_parent"
+     android:layout_height="match_parent">
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:orientation="vertical">
+
+         <com.google.android.material.appbar.AppBarLayout
+             android:id="@+id/appBarLayout2"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             app:elevation="5dp"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent">
+
+             <androidx.appcompat.widget.Toolbar
+                 android:id="@+id/toolbar"
+                 style="@style/Toolbar"
+                 android:background="@color/white"
+                 app:subtitleTextColor="@color/black"
+                 app:title="@string/title_activity_request_details"
+                 app:titleTextAppearance="@style/Toolbar.TitleText"
+                 app:titleTextColor="@color/black" />
+
+             <View
+                 android:layout_width="match_parent"
+                 android:layout_height="1dp"
+                 android:background="@color/light_gray" />
+
+         </com.google.android.material.appbar.AppBarLayout>
+
+         <ScrollView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/white"
+             android:fillViewport="true">
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="0dp"
+                 android:orientation="vertical">
+
+                 <LinearLayout
+                     android:layout_width="match_parent"
+                     android:layout_height="0dp"
+                     android:layout_weight="1"
+                     android:orientation="vertical">
+                     <com.google.android.material.textfield.TextInputLayout
+                         android:id="@+id/policyName"
+                         style="@style/turnKeyInput.Style"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="16dp"
+                         android:layout_marginLeft="16dp"
+                         android:layout_marginTop="24dp"
+                         android:layout_marginEnd="16dp"
+                         android:layout_marginRight="16dp"
+                         android:theme="@style/turnKeyInput.Theme"
+                         android:visibility="@{viewModel.hideFields ? View.VISIBLE : View.GONE}"
+                         app:errorTextAppearance="@style/error_appearance">
+
+                         <com.google.android.material.textfield.TextInputEditText
+                             android:id="@+id/policyNameTxt"
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:cursorVisible="true"
+                             android:enabled="false"
+                             android:hint="@string/selected_policy"
+                             android:inputType="textCapCharacters"
+                             android:paddingTop="@dimen/scale_14_dim"
+                             android:paddingBottom="@dimen/scale_14_dim"
+                             android:textColor="@color/colordark"
+                             android:textColorHint="@color/colordark"
+                             android:textSize="@dimen/scale_15" />
+                     </com.google.android.material.textfield.TextInputLayout>
+
+                     <com.google.android.material.textfield.TextInputLayout
+                         android:id="@+id/vehicleSelect"
+                         style="@style/turnKeyInput.Style"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="16dp"
+                         android:layout_marginLeft="16dp"
+                         android:layout_marginEnd="16dp"
+                         android:layout_marginRight="16dp"
+                         android:layout_marginTop="24dp"
+                         android:theme="@style/turnKeyInput.Theme"
+                         android:visibility="@{viewModel.hideFields ? View.VISIBLE : View.GONE}"
+                         app:errorTextAppearance="@style/error_appearance">
+
+                         <com.google.android.material.textfield.TextInputEditText
+                             android:id="@+id/vehicleSelectTxt"
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:layout_gravity="start"
+                             android:cursorVisible="false"
+                             android:drawableEnd="@drawable/graphite"
+                             android:drawableRight="@drawable/graphite"
+                             android:filterTouchesWhenObscured="true"
+                             android:focusable="false"
+                             android:focusableInTouchMode="true"
+                             android:hint="@string/select_vehicle"
+                             android:inputType="textCapCharacters"
+                             android:onClick="@{() -> viewModel.showPropertyId()}"
+                             android:paddingTop="@dimen/scale_14_dim"
+                             android:paddingBottom="@dimen/scale_14_dim"
+                             android:textAlignment="textStart"
+                             android:textColor="@color/colordark"
+                             android:textColorHint="@color/colordark"
+                             android:textSize="@dimen/scale_15" />
+                     </com.google.android.material.textfield.TextInputLayout>
+
+                     <com.google.android.material.textfield.TextInputLayout
+                         android:id="@+id/requestCategory"
+                         style="@style/turnKeyInput.Style"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="16dp"
+                         android:layout_marginLeft="16dp"
+                         android:layout_marginEnd="16dp"
+                         android:layout_marginRight="16dp"
+                         android:layout_marginTop="24dp"
+                         android:theme="@style/turnKeyInput.Theme"
+                         app:errorTextAppearance="@style/error_appearance">
+
+                         <com.google.android.material.textfield.TextInputEditText
+                             android:id="@+id/requestCategoryTxt"
+                             android:layout_width="match_parent"
+                             android:layout_height="match_parent"
+                             android:layout_gravity="start"
+                             android:enabled="false"
+                             android:cursorVisible="false"
+                             android:onClick="@{() -> viewModel.showRequestCategories()}"
+                             android:drawableEnd="@drawable/graphite"
+                             android:drawableRight="@drawable/graphite"
+                             android:filterTouchesWhenObscured="true"
+                             android:focusable="false"
+                             android:focusableInTouchMode="true"
+                             android:hint="@string/select_a_request_category"
+                             android:inputType="textCapCharacters"
+                             android:paddingTop="@dimen/scale_14_dim"
+                             android:paddingBottom="@dimen/scale_14_dim"
+                             android:textAlignment="textStart"
+                             android:textColor="@color/colordark"
+                             android:textColorHint="@color/colordark"
+                             android:textSize="@dimen/scale_15" />
+                     </com.google.android.material.textfield.TextInputLayout>
+
+                     <com.google.android.material.textfield.TextInputLayout
+                         android:id="@+id/requestDescriptionInputLayout"
+                         style="@style/turnKeyInput.Style"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="16dp"
+                         android:layout_marginLeft="16dp"
+                         android:layout_marginEnd="16dp"
+                         android:layout_marginRight="16dp"
+                         android:layout_marginTop="24dp"
+                         android:theme="@style/turnKeyInput.Theme"
+                         app:errorTextAppearance="@style/error_appearance">
+
+                         <com.google.android.material.textfield.TextInputEditText
+                             android:id="@+id/requestDescription"
+                             android:layout_width="match_parent"
+                             android:layout_height="144dp"
+                             android:cursorVisible="true"
+                             android:gravity="top"
+                             android:hint="@string/requestDescriptionDisclaimer"
+                             android:inputType="textCapSentences|textMultiLine"
+                             android:lines="30"
+                             android:paddingTop="@dimen/scale_16_dim"
+                             android:paddingBottom="@dimen/scale_16_dim"
+                             android:textColor="@color/colordark"
+                             android:textColorHint="@color/colordark"
+                             android:textSize="@dimen/scale_16" />
+
+                     </com.google.android.material.textfield.TextInputLayout>
+
+                     <androidx.constraintlayout.widget.ConstraintLayout
+                         android:id="@+id/constraintLayout"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginStart="16dp"
+                         android:layout_marginLeft="16dp"
+                         android:layout_marginEnd="16dp"
+                         android:layout_marginRight="16dp"
+                         android:layout_marginTop="24dp">
+
+                         <ImageButton
+                             android:id="@+id/requestImagePicker"
+                             android:layout_width="match_parent"
+                             android:layout_height="@dimen/scale_140_dim"
+                             android:adjustViewBounds="true"
+                             android:background="@drawable/imageviewpadding"
+                             android:contentDescription="@string/Upload_id_info"
+                             android:filterTouchesWhenObscured="true"
+                             android:onClick='@{() -> viewModel.showPictureOptions()}'
+                             android:scaleType="centerInside"
+                             app:layout_constraintBottom_toBottomOf="parent"
+                             app:layout_constraintEnd_toEndOf="parent"
+                             app:layout_constraintHorizontal_bias="0.0"
+                             app:layout_constraintStart_toStartOf="parent"
+                             app:layout_constraintTop_toTopOf="parent"
+                             app:srcCompat="@drawable/picbg" />
+
+                         <com.google.android.material.chip.Chip
+                             android:id="@+id/removePicture"
+                             style="@style/Widget.MaterialComponents.Chip.Entry"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:filterTouchesWhenObscured="true"
+                             android:onClick="@{() -> viewModel.removePicture()}"
+                             android:text="@string/remove"
+                             android:visibility="gone"
+                             app:layout_constraintBottom_toBottomOf="@+id/requestImagePicker"
+                             app:layout_constraintEnd_toEndOf="@+id/requestImagePicker"
+                             app:layout_constraintStart_toStartOf="@+id/requestImagePicker"
+                             app:layout_constraintTop_toTopOf="@+id/requestImagePicker"
+                             app:layout_constraintVertical_bias="0.82" />
+
+                         <TextView
+                             android:id="@+id/requestPhoto"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:filterTouchesWhenObscured="true"
+                             android:onClick='@{() -> viewModel.showPictureOptions()}'
+                             android:text="@string/add_a_photo_if_any"
+                             app:layout_constraintBottom_toBottomOf="@+id/requestImagePicker"
+                             app:layout_constraintEnd_toEndOf="@+id/requestImagePicker"
+                             app:layout_constraintStart_toStartOf="@+id/requestImagePicker"
+                             app:layout_constraintTop_toTopOf="@+id/requestImagePicker"
+                             app:layout_constraintVertical_bias="0.76" />
+                     </androidx.constraintlayout.widget.ConstraintLayout>
+
+                 </LinearLayout>
+                 <com.google.android.material.button.MaterialButton
+                     android:id="@+id/submitRequest"
+                     style="@style/turnKeyButton.Style"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_marginStart="16dp"
+                     android:layout_marginLeft="16dp"
+                     android:layout_marginEnd="16dp"
+                     android:layout_marginRight="16dp"
+                     android:layout_marginTop="16dp"
+                     android:layout_marginBottom="16dp"
+                     android:filterTouchesWhenObscured="true"
+                     android:onClick="@{() -> viewModel.submitRequest()}"
+                     android:paddingTop="@dimen/scale_16_dim"
+                     android:paddingBottom="@dimen/scale_16_dim"
+                     android:text="@string/submitRequest"
+                     android:textColor="@color/colorlight" />
+
+
+             </LinearLayout>
+
+         </ScrollView>
+
+     </LinearLayout>
+     <FrameLayout
+         android:id="@+id/requestBottomNav"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:background="@color/translucent_black"
+         android:clickable="true"
+         android:focusable="true"
+         android:visibility="gone">
+
+         <androidx.constraintlayout.widget.ConstraintLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="bottom"
+             android:background="@color/white"
+             app:behavior_hideable="true"
+             app:behavior_peekHeight="@dimen/scale_80_dim"
+             app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+             app:layout_constraintBottom_toBottomOf="parent"
+             app:layout_constraintEnd_toEndOf="parent"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             app:layout_constraintVertical_bias="1.0">
+
+             <LinearLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 android:divider="@color/black"
+                 android:dividerPadding="@dimen/scale_5_dim"
+                 android:orientation="vertical"
+                 android:showDividers="middle"
+                 app:layout_constraintBottom_toBottomOf="parent"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 app:layout_constraintStart_toStartOf="parent"
+                 app:layout_constraintTop_toTopOf="parent">
+
+                 <com.google.android.material.button.MaterialButton
+                     android:id="@+id/takePhoto"
+                     style="@style/Widget.MaterialComponents.Button.TextButton"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="start"
+                     android:filterTouchesWhenObscured="true"
+                     android:onClick="@{() -> viewModel.takePhoto()}"
+                     android:padding="@dimen/scale_16_dim"
+                     android:text="@string/takePhoto"
+                     android:textAlignment="textStart"
+                     android:textColor="@color/black" />
+
+                 <com.google.android.material.button.MaterialButton
+                     android:id="@+id/choosePhoto"
+                     style="@style/Widget.MaterialComponents.Button.TextButton"
+                     android:layout_width="match_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="start"
+                     android:filterTouchesWhenObscured="true"
+                     android:onClick="@{() -> viewModel.choosePhoto()}"
+                     android:padding="@dimen/scale_16_dim"
+                     android:text="@string/choosePhoto"
+                     android:textAlignment="textStart"
+                     android:textColor="@color/black" />
+
+
+             </LinearLayout>
+
+
+         </androidx.constraintlayout.widget.ConstraintLayout>
+     </FrameLayout>
+ </FrameLayout>
+
+
+</layout>

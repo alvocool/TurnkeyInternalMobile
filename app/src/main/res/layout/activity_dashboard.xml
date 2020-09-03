@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardViewModel" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <androidx.drawerlayout.widget.DrawerLayout
+
+            android:id="@+id/drawerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true">
+
+            <androidx.coordinatorlayout.widget.CoordinatorLayout
+                android:id="@+id/dbheaderview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipChildren="false">
+
+                <LinearLayout
+                    android:id="@+id/activityMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.appbar.AppBarLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:elevation="@dimen/scale_5_dim">
+
+                        <androidx.appcompat.widget.Toolbar
+                            android:id="@+id/toolbar"
+                            style="@style/Toolbar"
+                            app:subtitleTextColor="@color/black"
+                            app:title="@string/title_activity_dashboard"
+                            android:background="@color/white"
+                            app:titleTextAppearance="@style/Toolbar.TitleText"
+                            app:titleTextColor="@color/black" />
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/DashtabLayout"
+                            style="@style/AppTab"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/light_gray" />
+
+                    </com.google.android.material.appbar.AppBarLayout>
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/DashboardViewPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:clipToPadding="false" />
+                </LinearLayout>
+            </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/navigationView"
+                style="@style/Widget.Design.NavigationView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:background="@color/white"
+                app:itemBackground="@color/white"
+                app:itemIconTint="@color/black_effective"
+                app:itemTextColor="@color/black_effective"
+                app:menu="@menu/drawer">
+
+                <TextView
+                    android:id="@+id/AppVersion"
+                    style="@style/TextStyle.Title.Sub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:padding="@dimen/scale_5_dim"
+                    android:text="@{viewModel.appVersion}" />
+            </com.google.android.material.navigation.NavigationView>
+
+        </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
+    </FrameLayout>
+
+
+</layout>

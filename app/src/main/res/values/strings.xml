@@ -1,0 +1,458 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+
+    ////mine
+
+    <string name="app_name">Turnkey BankAssurance</string>
+
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+
+    //navigation tab
+    <string name="logout">Log out</string>
+
+    <string name="sessionExpired">Session Expired. Login to continue</string>
+    <!--CopyRight-->
+    <string name="copyright">©2020 Turnkey Group. All rights reserved.</string>
+
+
+    <!--SplashScreen-->
+
+    <!--Login Validation-->
+
+    <!--Drawer-->
+    <string name="open_drawer">Drawer Open</string>
+    <string name="close_drawer">Drawer Close</string>
+
+    <!--play store-->
+    <string name="app_google_play_store_link">"https://play.google.com/store/apps/details?id="</string>
+    <string name="app_market_link">"market://details?id="</string>
+
+    <string name="error301">Device setup failed. Error code 301.</string>
+
+    <string name="version">"version"</string>
+    <string name="cancel">Cancel</string>
+    <string name="resendOtp">Resend OTP</string>
+    <string name="otpDescription">Enter the OTP sent via SMS to </string>
+    <string name="benefit_limit_title">Enter Benefit Limit</string>
+    <string name="benefit_limit">Benefit Limit</string>
+    <string name="resendTitle">Resend Code in </string>
+
+    <string name="currency_kenya">KSh</string>
+    <string name="perYear">per year</string>
+    <string name="amount">Amount</string>
+    <string name="quote_validity">This quote is valid until</string>
+
+    <string name="firstInstallmentDesciption">for first installment.</string>
+    <string name="fullInstallmentDesciption">for a year.</string>
+
+    <string name="quoteReferenceHeader">Quote reference - </string>
+    <string name="inceptionDateHeader">Inception date - </string>
+    <string name="renewalDateHeader">Renewal date - </string>
+    <string name="expiredDateHeader">Expires on</string>
+    <!--Login Screen String List-->
+    <string name="login_description">Welcome</string>
+    <string name="login_description2">Enter your mobile number below to log in.</string>
+    <string name="login_description3">We will send a one time pin to your number</string>
+    <string name="reg_details">Not yet registered?</string>
+    <string name="reg_btn">Register Here</string>
+
+    <!--Dashboard Screen String List-->
+    <string name="title_activity_dashboard">Home</string>
+    <string name="quote">Quote</string>
+    <string name="quotes">Quotes</string>
+    <string name="Btn_View_Policy">View policy</string>
+    <string name="Btn_View_Quote">View quote</string>
+    <string name="Btn_View_claims">Claim details</string>
+    <string name="Btn_Get_insured">Get insurance now</string>
+    <string name="Btn_Add_insurance">Add insurance</string>
+    <string name="Btn_New_Claim">New claim</string>
+    <string name="title_activity_policy_details">Policy Details</string>
+
+
+    //Insurance
+
+
+    <!--Vehicle Details-->
+    <string name="insuranceType">Type of insurance</string>
+    <string name="vehiclePlate"> Vehicle registration number </string>
+    <string name="vehiclePlateHint">Include the required spacing</string>
+    <string name="vehicleModel"> Vehicle make</string>
+
+    <string name="dateStart">Cover start date</string>
+    <string name="dateEnd">Cover end date</string>
+    <string name="optional_extras"> Optional extras</string>
+
+    <!--headersVehicleDetails-->
+    <string name="headerVehicleDetail">Vehicle details</string>
+    <string name="headerVehicleValue"> Value of the vehicle</string>
+    <string name="headerYearOfManufacture"> Year of manufacturer</string>
+    <string name="headerCoverDetails">Cover details</string>
+
+    <string name="titleTopInsuranceProducts">Top Insurance Products</string>
+    <string name="titleOtherInsuranceProducts">Other Insurance Products</string>
+
+    <!--Vehicle Details Error-->
+    <string name="error_insuranceType"> Select your type of insurance</string>
+    <string name="error_vehicleModel">Select your vehicle model</string>
+    <string name="error_vehicleRegistration">Enter your vehicle registration number</string>
+    <string name="error_select_vehicleRegistration">Select your vehicle registration number</string>
+    <string name="error_invalid_vehicleRegistration"> Invalid vehicle registration number</string>
+    <string name="error_vehicleYearOfManufacture"> Enter year of manufacture</string>
+    <string name="error_vehicleValue"> Enter your vehicle value</string>
+    <string name="error_invalid_vehicleValue"> Invalid vehicle value</string>
+    <string name="error_invalid_vehicleYearOfManufacture"> Invalid vehicle year of manufacture</string>
+    <string name="warning_invalid_vehicleValue"> Vehicle value should be more than KSh 100</string>
+    <string name="error_invalid_kraNumber"> Invalid KRA number</string>
+    <string name="error_startDate"> Enter insurance start date</string>
+
+
+    <string name="proceed">Continue</string>
+    <string name="proceed_payment"> Continue to Payment</string>
+
+    <string name="renew_policy">Renew policy now</string>
+
+    <string name="ok">OK</string>
+
+    <string name="affirmation">I Agree</string>
+
+    <string name="error_incident_description">Enter your incident description</string>
+
+    <string name="error_request_description">Enter your request description</string>
+
+    <string name="error_request_category">Select a request category</string>
+
+    <string name="error_incident_date">Enter your incident date</string>
+
+    <string name="certificatePickupError">Select a certificate sticker pickup point</string>
+
+    <string name="policyCreationError">Select an option below in order to proceed.</string>
+
+    <string name="payment">Pay now</string>
+
+    <string name="paymentQ">How would you like to pay?</string>
+
+    <string name="paymentProcessingInfo">Please wait while we process your payment request</string>
+
+    <string name="title_activity_pay">pay</string>
+    <string name="done">Done</string>
+
+    <string name="mpesaError">The given amount is more than the M-pesa limit of 70,000. Proceed to use card payment option.</string>
+
+    <!--Payment strings-->
+    <string name="payment_pending">Pending payment</string>
+    <string name="payment_successful">Payment successful</string>
+    <string name="payment_info1">Your policy will be confirmed once</string>
+    <string name="payment_info1_pt2"> payment is received</string>
+    <string name="payment_subtitle_info_part1">A payment notification SMS has been sent to </string>
+    <string name="payment_subtitle_info_part2">Follow the instructions below to pay for your order.</string>
+
+    <string name="optpay1">1. Go to \'Safaricom\' menu.</string>
+    <string name="optpay2">2. Select \'Mpesa\' .</string>
+    <string name="optpay3">3. Select \'Lipa na Mpesa\'</string>
+    <string name="optpay4">4. Select \'Pay Bill:\' 504689.</string>
+    <string name="optpay5">5. Enter \'Business No:\' 785662.</string>
+    <string name="optpay6">6. Enter \'Account No:\' 9872.</string>
+    <string name="optpay7">7. Enter \'Amount: </string>
+    <string name="optpay8">8. Enter PIN and confirm.</string>
+
+    //Nav Items
+    <string name="navItemHome">Home</string>
+    <string name="navItemInsuranceProducts">Insurance Products</string>
+    <string name="navItemContactUs">Contact us</string>
+
+    <!--ViewAll-->
+
+    <string name="actions">Actions</string>
+
+    <!--App Message-->
+    <string name="no_connection">No network connection. Make sure the WiFi or mobile data is turned on, then try again.</string>
+    <string name="missing_value">Please enter the missing values</string>
+
+    <string name="missing_insurance_types_value">No Insurance Types where found</string>
+    <string name="missing_vehicle_models_value">No Vehicle Models where found</string>
+    <string name="empty_screen">An error occurred while \n performing request.</string>
+
+    <string name="empty_claims_screen">You don’t have any claims yet.</string>
+    <string name="submitClaim">Submit a claim</string>
+
+    <string name="claimSubmit">Submit claim</string>
+
+    <string name="submitRequest">Submit request</string>
+
+    <string name="please_retry">Please Retry</string>
+    <string name="retry">Retry</string>
+    <string name="excess">Excess</string>
+    <string name="title_activity_quote_details">Quote Details</string>
+    <string name="vehicle_insurance_type_dialog">Select your preferred insurance type below :-</string>
+
+    <string name="save_quote">Save quote</string>
+    <string name="save">Save</string>
+    <string name="buy_insurance">Get this insurance</string>
+    <string name="title_activity_vehicle_insurance">Vehicle Insurance</string>
+    <string name="title_activity_insurance_quotes">Insurance Quotes</string>
+
+
+    <string name="Q1_quote_step1">Please add a photo of your</string>
+    <string name="Q2_quote_step1">logbook or purchase agreement.</string>
+    <string name="Q3_quote_step1">Upload proof of ownership</string>
+
+    <string name="vehicleValuationQ1">Upload your vehicle valuation</string>
+    <string name="error_locations">No valuer locations found</string>
+    <string name="error_valuers">No valuers found</string>
+
+
+    <string name="error_branch_region">No branch regions found</string>
+
+
+    <string name="Q1_quote_step2">Please provide us with your KRA Pin, Identification number and upload a copy of your ID</string>
+    <string name="Upload_id_info"> Upload a copy of your ID</string>
+
+
+    <!--Registration-->
+    <string name="title_activity_register">Registration</string>
+    <string name="customer_surname">Surname</string>
+    <string name="customer_first_name">First name</string>
+    <string name="customer_mobile_no"> Mobile number</string>
+    <string name="customer_mobile_no_hint" tools:ignore="Typos">Hint: 07 xxx xxx </string>
+    <string name="customer_email_address">Email Address</string>
+    <string name="customer_kra_pin">KRA PIN</string>
+    <string name="customer_kra_pin_hint">Hint: A123456789$</string>
+    <string name="customer_id_number">ID Number</string>
+
+    <string name="incidentDescriptionDisclaimer">Give a short description of the incident</string>
+    <string name="requestDescriptionDisclaimer">Give a short description of the request</string>
+
+    <string name="incidentDate">Incident Date</string>
+    <string name="incidentTime">Incident Time</string>
+    <string name="add_incident_report_pic">Add a photo of the abstract (Incident report?)</string>
+    <string name="add_driving_licence_pic">Add a photo of your drivers licence</string>
+    <string name="possessionQ">Are you currently in possession of the vehicle?</string>
+    <string name="add_damage_pic">Add a photo of the damage</string>
+    <string name="Yes">Yes</string>
+    <string name="No">No</string>
+
+    <string name="claimsDisclaimer">Ensure all details are correct</string>
+    <string name="insurancePolicy"> Insurance policy</string>
+    <string name="incidentDescription"> Incident Description</string>
+    <string name="incidentDateAndTime"> Incident date &amp; time</string>
+    <string name="autoRepairCentre">Auto Repair Centre</string>
+    <string name="picsOfDamage">Photos of the damage</string>
+    <string name="submitClaimsDisclaimer">All information submitted in this claim is accurate and complete.</string>
+
+    <!--Registration Errors-->
+    <string name="error_surname">Enter your surname</string>
+    <string name="error_first_name">Enter your first name</string>
+    <string name="error_mobile_no">Enter your mobile number</string>
+    <string name="error_email_address">Enter your email address</string>
+    <string name="error_invalid_email_address">Invalid Email Address</string>
+    <string name="error_kra_pin">Enter KRA PIN Number</string>
+    <string name="error_id">Enter ID Number</string>
+    <string name="title_activity_otp">One Time Pin</string>
+
+    <string name="error_image">Image is too large </string>
+
+    <string name="error_incident_report">Please add a photo of your incident report before continuing.</string>
+    <string name="error_driving_licence">Please add a photo of your driving licence before continuing.</string>
+    <string name="error_damage_photos">Please add a photo your damage photos before continuing.</string>
+
+    <string name="selectValuer">Select this Valuer</string>
+    <string name="selectBranch">Select this Branch</string>
+
+    <string name="policies">Policies</string>
+    <string name="claims">Claims</string>
+
+
+    <string name="policyEmptyTitle1">You don’t have any policies yet.</string>
+    <string name="policyEmptyTitle2">Get quotes and apply for a policy that best suits you.</string>
+
+    <string name="termsAndConditionsHeader">Terms &amp; Conditions</string>
+    <string name="termsAndConditions">
+
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultricies mi eget mauris pharetra et ultrices. Augue lacus viverra vitae congue eu consequat ac felis donec. Quam quisque id diam vel quam elementum pulvinar etiam. Pretium vulputate sapien nec sagittis aliquam malesuada bibendum. Duis convallis convallis tellus id interdum velit laoreet. Diam phasellus vestibulum lorem sed. Malesuada nunc vel risus commodo viverra maecenas. Sapien et ligula ullamcorper malesuada proin libero nunc consequat interdum. Orci a scelerisque purus semper eget. Tellus in metus vulputate eu scelerisque felis imperdiet. Vitae suscipit tellus mauris a diam maecenas sed. Scelerisque viverra mauris in aliquam sem fringilla ut morbi tincidunt.
+
+Fermentum iaculis eu non diam phasellus. Accumsan sit amet nulla facilisi morbi tempus iaculis. Blandit cursus risus at ultrices mi tempus imperdiet. Amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Nunc faucibus a pellentesque sit amet porttitor eget dolor. Ut etiam sit amet nisl purus in mollis. Vel turpis nunc eget lorem dolor sed viverra. Sit amet mauris commodo quis imperdiet massa tincidunt. Vitae elementum curabitur vitae nunc sed velit dignissim sodales. Quis vel eros donec ac odio. Egestas erat imperdiet sed euismod nisi porta lorem.
+
+Sed risus pretium quam vulputate dignissim suspendisse in est. Ut venenatis tellus in metus vulputate eu scelerisque. Pretium lectus quam id leo. Feugiat pretium nibh ipsum consequat nisl vel pretium lectus quam. Sed viverra ipsum nunc aliquet bibendum enim. Rutrum tellus pellentesque eu tincidunt tortor aliquam. Neque vitae tempus quam pellentesque nec. Pharetra magna ac placerat vestibulum lectus mauris ultrices eros in. Hendrerit dolor magna eget est lorem ipsum dolor. Egestas erat imperdiet sed euismod nisi porta lorem mollis aliquam. Pellentesque id nibh tortor id aliquet lectus proin nibh nisl. Ultricies integer quis auctor elit. Amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus.
+
+Vestibulum lorem sed risus ultricies tristique. Sit amet aliquam id diam maecenas ultricies mi eget mauris. At consectetur lorem donec massa sapien faucibus et molestie. Amet mattis vulputate enim nulla aliquet porttitor lacus luctus. Morbi tempus iaculis urna id. In dictum non consectetur a erat nam. Venenatis urna cursus eget nunc scelerisque viverra. Malesuada bibendum arcu vitae elementum curabitur. Interdum varius sit amet mattis vulputate enim nulla. Pulvinar pellentesque habitant morbi tristique senectus et netus et. Urna neque viverra justo nec ultrices. Aliquet nibh praesent tristique magna sit amet purus gravida. Lectus urna duis convallis convallis tellus id interdum velit. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Sem fringilla ut morbi tincidunt.
+
+Commodo quis imperdiet massa tincidunt. Est sit amet facilisis magna etiam tempor orci. Ullamcorper a lacus vestibulum sed arcu non odio euismod lacinia. Hendrerit dolor magna eget est lorem. Odio morbi quis commodo odio aenean sed. Ornare lectus sit amet est placerat in egestas erat. Egestas purus viverra accumsan in nisl. Sed velit dignissim sodales ut eu sem integer. Pretium vulputate sapien nec sagittis aliquam malesuada. Dictum fusce ut placerat orci nulla pellentesque. Egestas fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate. Eget sit amet tellus cras adipiscing enim eu turpis egestas. Sapien eget mi proin sed libero enim sed faucibus.
+
+Viverra maecenas accumsan lacus vel facilisis volutpat. Magna sit amet purus gravida quis blandit turpis cursus. Amet mattis vulputate enim nulla. Vulputate dignissim suspendisse in est ante. Nullam non nisi est sit amet facilisis magna etiam. Nulla facilisi cras fermentum odio eu. Semper viverra nam libero justo laoreet sit amet cursus sit. Malesuada bibendum arcu vitae elementum curabitur vitae nunc. Nam aliquam sem et tortor consequat id porta nibh. Nam libero justo laoreet sit amet cursus sit.
+
+Sit amet mattis vulputate enim nulla aliquet. Eget nulla facilisi etiam dignissim diam. Condimentum vitae sapien pellentesque habitant morbi tristique. Dictumst quisque sagittis purus sit amet. Massa tempor nec feugiat nisl. Nulla facilisi etiam dignissim diam quis enim lobortis scelerisque. Nisi quis eleifend quam adipiscing vitae proin sagittis nisl rhoncus. Facilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat. Sed blandit libero volutpat sed cras ornare. Scelerisque purus semper eget duis at tellus at urna condimentum.
+
+Duis convallis convallis tellus id interdum velit laoreet. Nisl condimentum id venenatis a condimentum vitae sapien. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim. Potenti nullam ac tortor vitae. Nunc non blandit massa enim nec dui nunc mattis. Gravida arcu ac tortor dignissim convallis aenean et. Mauris ultrices eros in cursus. A lacus vestibulum sed arcu non odio euismod lacinia at. Nisl vel pretium lectus quam id leo in. Dui ut ornare lectus sit amet est.
+
+Pellentesque elit eget gravida cum sociis. Eu volutpat odio facilisis mauris sit. Senectus et netus et malesuada fames ac. Amet venenatis urna cursus eget nunc scelerisque viverra mauris in. Habitasse platea dictumst vestibulum rhoncus. Gravida dictum fusce ut placerat orci nulla pellentesque dignissim enim. Ac odio tempor orci dapibus ultrices in. Scelerisque eleifend donec pretium vulputate sapien. Tristique nulla aliquet enim tortor at auctor urna nunc id. Cursus risus at ultrices mi tempus imperdiet. Vel risus commodo viverra maecenas accumsan lacus. Cras ornare arcu dui vivamus arcu. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Blandit volutpat maecenas volutpat blandit aliquam etiam. Ipsum dolor sit amet consectetur adipiscing elit duis. Ultrices eros in cursus turpis. Nec sagittis aliquam malesuada bibendum arcu vitae elementum. Volutpat maecenas volutpat blandit aliquam etiam erat. Fames ac turpis egestas sed.
+
+Massa tincidunt nunc pulvinar sapien et. Neque convallis a cras semper auctor neque vitae tempus quam. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. Tortor id aliquet lectus proin nibh nisl condimentum. Orci porta non pulvinar neque laoreet suspendisse interdum consectetur libero. Accumsan tortor posuere ac ut. Viverra tellus in hac habitasse platea. Tempus urna et pharetra pharetra massa massa ultricies. Sollicitudin nibh sit amet commodo nulla facilisi nullam. Scelerisque varius morbi enim nunc faucibus a. Tellus cras adipiscing enim eu turpis egestas. Et netus et malesuada fames ac turpis egestas. Ornare lectus sit amet est placerat in. Vulputate sapien nec sagittis aliquam. Tempus egestas sed sed risus pretium quam vulputate dignissim. Faucibus scelerisque eleifend donec pretium vulputate. Nisi scelerisque eu ultrices vitae auctor eu augue ut.
+
+Elit at imperdiet dui accumsan sit. At urna condimentum mattis pellentesque id nibh. Nisl tincidunt eget nullam non nisi est. Sit amet tellus cras adipiscing enim eu turpis. Adipiscing enim eu turpis egestas pretium aenean pharetra magna. Nullam vehicula ipsum a arcu cursus vitae congue mauris. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Nulla porttitor massa id neque aliquam vestibulum morbi. Scelerisque fermentum dui faucibus in ornare quam. Amet aliquam id diam maecenas ultricies mi eget.
+
+Aliquam purus sit amet luctus venenatis lectus magna fringilla. Orci eu lobortis elementum nibh tellus molestie. Egestas erat imperdiet sed euismod. Ultricies mi quis hendrerit dolor magna. Diam quam nulla porttitor massa id neque aliquam. Praesent semper feugiat nibh sed pulvinar proin gravida. Consectetur a erat nam at lectus. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus. Felis bibendum ut tristique et. Quis lectus nulla at volutpat diam. Donec ultrices tincidunt arcu non sodales neque sodales. Vitae tortor condimentum lacinia quis vel. Vestibulum lectus mauris ultrices eros in cursus turpis massa tincidunt. Quis lectus nulla at volutpat diam ut venenatis. Cras semper auctor neque vitae tempus quam pellentesque nec.
+
+Elit pellentesque habitant morbi tristique senectus et netus et malesuada. Diam phasellus vestibulum lorem sed risus ultricies tristique. Quam lacus suspendisse faucibus interdum posuere lorem ipsum dolor sit. Massa enim nec dui nunc. Donec ultrices tincidunt arcu non sodales neque sodales ut. Sed faucibus turpis in eu mi bibendum neque egestas congue. Odio ut sem nulla pharetra diam sit amet. Velit sed ullamcorper morbi tincidunt ornare massa eget egestas. Sed nisi lacus sed viverra tellus. Et pharetra pharetra massa massa ultricies mi quis hendrerit. Eu turpis egestas pretium aenean pharetra magna ac placerat vestibulum. Vitae justo eget magna fermentum. Pharetra vel turpis nunc eget lorem. Iaculis at erat pellentesque adipiscing commodo elit at imperdiet.
+
+Mauris rhoncus aenean vel elit scelerisque mauris pellentesque. Condimentum lacinia quis vel eros. Nibh sit amet commodo nulla facilisi nullam vehicula. Ipsum nunc aliquet bibendum enim facilisis gravida neque convallis a. Lorem dolor sed viverra ipsum nunc aliquet bibendum. Egestas congue quisque egestas diam in. A scelerisque purus semper eget duis at tellus at. Phasellus faucibus scelerisque eleifend donec pretium vulputate sapien nec sagittis. Mi quis hendrerit dolor magna eget est lorem ipsum dolor. Faucibus ornare suspendisse sed nisi. Adipiscing at in tellus integer. Mattis vulputate enim nulla aliquet porttitor lacus luctus. Cras fermentum odio eu feugiat. Eu tincidunt tortor aliquam nulla facilisi cras. Leo urna molestie at elementum eu facilisis. Odio ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Sit amet aliquam id diam maecenas ultricies mi eget. Pulvinar neque laoreet suspendisse interdum. Eget gravida cum sociis natoque penatibus et. Dolor morbi non arcu risus quis varius quam quisque.
+
+Consequat mauris nunc congue nisi vitae suscipit tellus. Vivamus at augue eget arcu dictum varius duis at consectetur. Magna fermentum iaculis eu non diam phasellus. Ultrices tincidunt arcu non sodales neque sodales ut etiam. Nisl suscipit adipiscing bibendum est. Eu scelerisque felis imperdiet proin fermentum leo vel. Amet porttitor eget dolor morbi non arcu risus. Metus vulputate eu scelerisque felis imperdiet proin. Nisl tincidunt eget nullam non nisi est sit amet facilisis. Diam vulputate ut pharetra sit amet aliquam id diam.
+
+Tempus iaculis urna id volutpat. Blandit aliquam etiam erat velit. Arcu vitae elementum curabitur vitae nunc sed velit. Ac feugiat sed lectus vestibulum mattis ullamcorper velit. Sagittis nisl rhoncus mattis rhoncus urna neque viverra justo. Integer eget aliquet nibh praesent. Id aliquet lectus proin nibh. Proin nibh nisl condimentum id. Vulputate odio ut enim blandit volutpat maecenas. Id porta nibh venenatis cras sed felis eget. Vulputate dignissim suspendisse in est ante in nibh mauris. Lacus laoreet non curabitur gravida arcu ac.
+
+    </string>
+
+    <string name="insuranceProductSubtitle">
+        Soon you will be able to apply and manage these insurance products from this app. In the meantime, visit our website for more information.
+    </string>
+    <string name="title_activity_contact_us">Contact us</string>
+    <string name="general">General</string>
+    <string name="visitWebsite">Visit website</string>
+    <string name="main_switchboard"> Main switchboard</string>
+    <string name="cell"> Cell</string>
+    <string name="insurance_app_support">Insurance app support</string>
+    <string name="insurance_app_support_other">Or visit a TurnKey branch near you.</string>
+    <string name="mainSupportNumber">+254 (0)710 241 892</string>
+    <string name="cellOne">+254 (0)719 784 120</string>
+    <string name="cellTwo">+254 (0)719 784 120</string>
+    <string name="supportEmail">info@turnkeyafrica.africa</string>
+    <string name="title_activity_proof_of_owner_ship">Proof of ownership</string>
+    <string name="title_activity_identifications">Identification</string>
+    <string name="title_activity_confirm_and_pay">Confirm and pay</string>
+    <string name="title_activity_payment_successful">Payment successful</string>
+    <string name="title_activity_insurance_products">Insurance Products</string>
+    <string name="title_activity_find_valuer">Find a Valuer</string>
+    <string name="title_activity_valuer_details">ValuerDetailsActivity</string>
+    <string name="title_activity_vehicle_valuation">Vehicle valuation</string>
+
+
+    <string name="input_error_simple">Enter value</string>
+
+    <string name="error_card_name">Enter credit card name</string>
+
+    <string name="error_invalid_card_name">Invalid credit card name. Use both names with space in between them. All texts should be in uppercase.</string>
+
+    <string name="error_card_number">Enter credit card number</string>
+
+    <string name="title_terms_by_agreement">By registering, you are agreeing to the</string>
+
+    <string name="title_policy_terms_by_agreement">By paying, you are agreeing to the</string>
+
+    <string name="remove">Remove</string>
+
+
+    <!--Dialog Errors-->
+    <string name="error_no_proof_of_ownership">Please add a photo of your proof of ownership before continuing.</string>
+    <string name="error_no_id">Please add a photo of your identification card before continuing.</string>
+    <string name="valuer_required_info">In order for this policy to take effect,
+        we need a vehicle valuation report.</string>
+    <string name="certificate_required_info">Capture certificate sticker pickup branch to continue.</string>
+
+
+    <!--Picture Dialog options-->
+    <string name="takePhoto">Take a photo</string>
+    <string name="choosePhoto">Choose a photo</string>
+    <string name="uploadEvaluation">Upload valuation</string>
+    <string name="findValuer">Find a valuer</string>
+    <string name="certificatePickup"> Certificate sticker pickup</string>
+
+    <string name="payOption1">Pay with M-Pesa</string>
+    <string name="payOption2">Pay with credit card</string>
+
+    <string name="paymentModeError">Select a payment mode</string>
+    <string name="paymentUnsuccessful">Payment was unsuccessful. Try again.</string>
+
+
+    <string name="permissionsTitle">App Permissions</string>
+    <string name="AcceptPermissionsInfo">Accept permissions to proceed to using this application</string>
+    <string name="AcceptPermissionsInfo2">You have denied some permissions.Allows all permissions at [Setting] > [Permissions]</string>
+    <string name="navigate_to_settings">Go to settings</string>
+    <string name="remindLater">Remind me later</string>
+
+    <string name="uploading">Uploading</string>
+    <string name="loading">Loading</string>
+    <string name="editPolicy">Edit policy</string>
+    <string name="title_activity_profile">Your Profile</string>
+    <string name="title_activity_edit_profile">Edit Profile</string>
+
+    <string name="edit">Edit</string>
+    <string name="personalDetails">Personal details</string>
+    <string name="memberSince">Member since</string>
+    <string name="kycStatus"> KYC Status :</string>
+
+    <string name="title_activity_card_payment">Pay with a credit card</string>
+    <string name="paying">Paying</string>
+
+    <string name="creditCardName">Name on credit card </string>
+    <string name="creditCardNameHint">e.g. JOHN DOE</string>
+    <string name="creditCardNumber">Credit card number</string>
+    <string name="dateExpire">Expire date</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+
+    <string name="cvvNumber">CVV number</string>
+    <string name="cvvNumberInfo">Last 3 digits on the back of your card</string>
+    <string name="cvv">CVV</string>
+
+    <string name="phone">Phone</string>
+
+    <string name="title_activity_certificate_pick_up">Certificate sticker pickup</string>
+    <string name="title_activity_branch_details">BranchDetailsActivity</string>
+    <string name="title_activity_create_claim">Create a Claim</string>
+    <string name="create_claim_question">Which asset does your claim relate to?</string>
+    <string name="create_request_question">Which policy does your request relate to?</string>
+    <string name="title_activity_claim_details">Claim details</string>
+    <string name="title_activity_request_details">Request details</string>
+    <string name="title_activity_confirm_claim_details">Confirm claim details</string>
+    <string name="navItemServiceRequest">Service Requests</string>
+    <string name="title_activity_service_request">Service Requests</string>
+    <string name="newRequest">New Request</string>
+    <string name="title_activity_service_request_details">Request Details</string>
+    <string name="title_activity_inbox">Inbox</string>
+    <string name="empty_service_request_screen">You don\'t have any service request yet.</string>
+    <string name="title_activity_new_request_question">New Request</string>
+    <string name="newRequestQ">Is your request associated with a policy?</string>
+    <string name="title_create_request">Create a Request</string>
+    <string name="selected_policy">Selected policy</string>
+    <string name="select_vehicle">Select vehicle</string>
+    <string name="select_a_request_category">Select a request category</string>
+    <string name="add_a_photo_if_any">Add a photo</string>
+    <string name="notifications">Notifications</string>
+    <string name="claim_number">Claim number</string>
+    <string name="policy_number">Policy number</string>
+    <string name="date_submitted">Date submitted</string>
+    <string name="incident_date">Incident date</string>
+    <string name="status">Status</string>
+    <string name="incident_description">Incident description</string>
+    <string name="picturedamages">PictureDamages</string>
+    <string name="alert_upload_no_incident_images">Are you sure you wish to proceed without uploading any incident picture.</string>
+    <string name="error_accept_details">Check the field above to continue.</string>
+    <string name="Btn_View_Service_Request">Request details</string>
+
+    <string name="requestHistory">Request history</string>
+    <string name="ticket_number">Ticket number</string>
+    <string name="request_category">Request category</string>
+    <string name="description">Description</string>
+    <string name="comments">Comments</string>
+    <string name="vehicle">Vehicle</string>
+    <string name="New">New</string>
+    <string name="notifynew">notifyNew</string>
+    <string name="default_notification_channel_id">BankAssurance Notification</string>
+    <string name="error_notification_account">Failed to setup notification for this device.</string>
+    <string name="history">History</string>
+    <string name="earlier">Earlier</string>
+    <string name="title_activity_notification_details">Notification details</string>
+    <string name="message">Message</string>
+    <string name="dateRead">Date read</string>
+    <string name="subject">Subject</string>
+    <string name="from">From</string>
+    <string name="mpesaPaymentOptionText">You have chosen to pay through mpesa. Please note to receive an sdk push for automatic payment ensure that: \n\n 1. Your safaricom line was used to create this account. \n 2. Your safaricom line is currently active. \n \n If the above is okay proceed to automatic payment by clicking okay, else click cancel and follow the steps indicated.</string>
+    <string name="payment_subtitle_info_part3">You have chosen to pay manually through mpesa.</string>
+    <string name="manual_payment_info">Please enter the mpesa code returned from the mpesa success message below.</string>
+    <string name="mpesaManualCode">Hint: OF90xxxxxx</string>
+    <string name="mpesaCode">Mpesa Code</string>
+    <string name="error_mpesa_code">Enter mpesa code</string>
+    <string name="error_mpesa_agent_code">Mpesa payment is not available for this agent.</string>
+    <string name="mpesa_number_hint">Hint: Enter the number you used to pay with.</string>
+</resources>

@@ -1,0 +1,48 @@
+<resources>
+
+
+    ///mine
+    <dimen name="scale_4">4sp</dimen>
+    <dimen name="scale_6">6sp</dimen>
+    <dimen name="scale_10">10sp</dimen>
+    <dimen name="scale_12">12sp</dimen>
+    <dimen name="scale_14">14sp</dimen>
+    <dimen name="scale_15">15sp</dimen>
+    <dimen name="scale_16">16sp</dimen>
+    <dimen name="scale_18">18sp</dimen>
+    <dimen name="scale_20">20sp</dimen>
+    <dimen name="scale_24">24sp</dimen>
+    <dimen name="scale_25">25sp</dimen>
+
+    //dimensions
+    <dimen name="scale_1_dim">1dp</dimen>
+    <dimen name="scale_2_dim">2dp</dimen>
+    <dimen name="scale_3_dim">3dp</dimen>
+    <dimen name="scale_5_dim">5dp</dimen>
+    <dimen name="scale_8_dim">8dp</dimen>
+    <dimen name="scale_10_dim">10dp</dimen>
+    <dimen name="scale_12_dim">12dp</dimen>
+    <dimen name="scale_14_dim">14dp</dimen>
+    <dimen name="scale_15_dim">15dp</dimen>
+    <dimen name="scale_16_dim">16dp</dimen>
+    <dimen name="scale_18_dim">18dp</dimen>
+    <dimen name="scale_20_dim">20dp</dimen>
+    <dimen name="scale_22_dim">22dp</dimen>
+    <dimen name="scale_24_dim">24dp</dimen>
+    <dimen name="scale_25_dim">25dp</dimen>
+    <dimen name="scale_30_dim">30dp</dimen>
+    <dimen name="scale_40_dim">40dp</dimen>
+    <dimen name="scale_45_dim">45dp</dimen>
+    <dimen name="scale_50_dim">50dp</dimen>
+    <dimen name="scale_70_dim">70dp</dimen>
+    <dimen name="scale_80_dim">80dp</dimen>
+    <dimen name="scale_90_dim">90dp</dimen>
+    <dimen name="scale_100_dim">100dp</dimen>
+    <dimen name="scale_120_dim">120dp</dimen>
+    <dimen name="scale_140_dim">140dp</dimen>
+    <dimen name="scale_160_dim">160dp</dimen>
+    <dimen name="scale_200_dim">200dp</dimen>
+    <dimen name="scale_250_dim">250dp</dimen>
+    <dimen name="scale_400_dim">400dp</dimen>
+    <dimen name="scale_32_dim">32dp</dimen>
+</resources>

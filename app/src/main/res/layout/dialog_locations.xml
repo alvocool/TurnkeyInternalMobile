@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.findvaluer.locationsdialog.LocationsDialogViewModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/scale_16_dim"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginRight="@dimen/scale_16_dim"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:layout_marginTop="@dimen/scale_80_dim"
+            android:layout_marginBottom="@dimen/scale_80_dim"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="@dimen/scale_10_dim"
+            app:cardUseCompatPadding="true">
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/dismissVehicleModels"
+                    android:layout_width="@dimen/scale_20_dim"
+                    android:layout_height="@dimen/scale_20_dim"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/scale_24_dim"
+                    android:layout_marginEnd="@dimen/scale_24_dim"
+                    android:layout_marginRight="@dimen/scale_24_dim"
+                    android:src="@drawable/close"
+                    android:onClick="@{() -> viewModel.close()}"
+                    android:filterTouchesWhenObscured="true"
+                    android:layout_alignParentEnd="true"
+                    android:contentDescription="@string/close_drawer" />
+
+                <ListView
+                    android:id="@+id/locations"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/dismissVehicleModels"
+                    android:layout_marginTop="@dimen/scale_16_dim"
+                    android:divider="@color/dividerColor"
+                    android:dividerPadding="@dimen/scale_10_dim"
+                    android:dividerHeight="@dimen/scale_1_dim"
+                    android:showDividers="middle"
+                  />
+
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</layout>

@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.vehicleinsurance.VehicleInsuranceActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.vehicleinsurance.VehicleInsuranceViewModel" />
+
+    </data>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="@dimen/scale_5_dim">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar"
+                app:subtitleTextColor="@color/black"
+                app:title="@string/title_activity_vehicle_insurance"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                app:titleTextColor="@color/black"
+                android:background="@color/white"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scale_2_dim"
+                android:background="@color/light_gray" />
+
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+            <TextView
+                android:id="@+id/headerVehicleDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/headerVehicleDetail"
+                android:textAppearance="@style/TextAppearance.Text.Medium"
+                android:textStyle="bold"
+                android:layout_marginTop="@dimen/scale_24_dim"
+                android:layout_marginStart="@dimen/scale_16_dim"
+                android:layout_marginLeft="@dimen/scale_16_dim"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/vehicle_Type_InputLayout"
+                style="@style/turnKeyInput.Style"
+                android:theme="@style/turnKeyInput.Theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/scale_16_dim"
+                android:layout_marginEnd="@dimen/scale_16_dim"
+                android:layout_marginBottom="@dimen/scale_24_dim"
+                app:errorTextAppearance="@style/error_appearance">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/vehicle_Type"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="@{() -> viewModel.ShowVehicleModels()}"
+                    android:filterTouchesWhenObscured="true"
+                    android:drawableEnd="@drawable/graphitedown"
+                    android:drawableRight="@drawable/graphitedown"
+                    android:focusableInTouchMode="true"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:text="@{viewModel.vehicleMake}"
+                    android:inputType="textCapCharacters"
+                    android:paddingTop="@dimen/scale_14_dim"
+                    android:paddingBottom="@dimen/scale_14_dim"
+                    android:textColor="@color/colordark"
+                    android:textColorHint="@color/colordark"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:hint="@string/vehicleModel"
+                    android:textSize="@dimen/scale_15" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/vehicleReg_InputLayout"
+                style="@style/turnKeyInput.Style"
+                android:theme="@style/turnKeyInput.Theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/scale_16_dim"
+                android:layout_marginEnd="@dimen/scale_16_dim"
+                android:layout_marginBottom="@dimen/scale_24_dim"
+                app:helperText="@string/vehiclePlateHint"
+                app:errorTextAppearance="@style/error_appearance">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/vehicleReg"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:cursorVisible="true"
+                    android:text="@{viewModel.vehicleRegistration}"
+                    android:inputType="textCapCharacters"
+                    android:hint="@string/vehiclePlate"
+                    android:paddingTop="@dimen/scale_14_dim"
+                    android:paddingBottom="@dimen/scale_14_dim"
+                    android:textColor="@color/colordark"
+                    android:textColorHint="@color/colordark"
+                    android:textSize="@dimen/scale_15" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/vehicleYearManufacture_InputLayout"
+                    style="@style/turnKeyInput.Style"
+                    android:theme="@style/turnKeyInput.Theme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/scale_16_dim"
+                    android:layout_marginEnd="@dimen/scale_16_dim"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/vehicleYearManufacture"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cursorVisible="true"
+                        android:hint="@string/headerYearOfManufacture"
+                        android:text="@{viewModel.vehicleYearOfManufacture}"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:paddingTop="@dimen/scale_14_dim"
+                        android:paddingBottom="@dimen/scale_14_dim"
+                        android:textColor="@color/colordark"
+                        android:textColorHint="@color/colordark"
+                        android:textSize="@dimen/scale_15"/>
+                </com.google.android.material.textfield.TextInputLayout>
+            <TextView
+                android:id="@+id/headerVehicleValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.Text.Medium"
+                android:text="@string/headerVehicleValue"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/scale_16_dim"
+                android:layout_marginLeft="@dimen/scale_16_dim"
+                android:layout_marginTop="@dimen/scale_40_dim"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/scale_16_dim"
+                android:layout_marginEnd="@dimen/scale_16_dim">
+
+                <TextView
+                    android:id="@+id/currency_kenya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:text="@string/currency_kenya"
+                    android:textAppearance="@style/TextAppearance.Text.Medium"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/vehicleValue_InputLayout"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/vehicleValue_InputLayout"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                android:id="@+id/amount_veh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:textSize="@dimen/scale_12"
+                android:text="@string/amount"
+                android:textColor="@color/gray"
+                app:layout_constraintBottom_toBottomOf="@+id/vehicleValue_InputLayout"
+                app:layout_constraintEnd_toEndOf="@+id/vehicleValue_InputLayout"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/vehicleValue_InputLayout"
+                app:layout_constraintTop_toTopOf="@+id/vehicleValue_InputLayout"
+                app:layout_constraintVertical_bias="0.0" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/vehicleValue_InputLayout"
+                style="@style/turnKeyInput.Style"
+                android:theme="@style/turnKeyInput.Theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:errorTextAppearance="@style/error_appearance">
+
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/vehicleValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="@dimen/scale_50_dim"
+                    android:paddingLeft="@dimen/scale_50_dim"
+                    android:paddingRight="@dimen/scale_8_dim"
+                    android:cursorVisible="true"
+                    android:maxLength="18"
+                    android:textAppearance="@style/TextAppearance.Text.Medium"
+                    android:textStyle="bold"
+                    android:inputType="number"
+                    android:text="@{viewModel.vehicleValue}"
+                    android:textAlignment="textEnd"
+                    android:layout_gravity="end"
+                    android:paddingTop="@dimen/scale_18_dim"
+                    android:paddingBottom="@dimen/scale_14_dim"
+                    android:textColor="@color/colordark"
+                    android:textColorHint="@color/colordark"
+                    android:textSize="@dimen/scale_15"
+                    android:paddingEnd="@dimen/scale_8_dim" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/headerCoverDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/headerCoverDetails"
+                android:textAppearance="@style/TextAppearance.Text.Medium"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/scale_16_dim"
+                android:layout_marginLeft="@dimen/scale_16_dim"
+                android:layout_marginTop="@dimen/scale_40_dim"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/vehicle_insuranceType_InputLayout"
+                style="@style/turnKeyInput.Style"
+                android:theme="@style/turnKeyInput.Theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/scale_16_dim"
+                android:layout_marginEnd="@dimen/scale_16_dim"
+                android:layout_marginBottom="@dimen/scale_24_dim"
+                app:errorTextAppearance="@style/error_appearance">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/vehicle_insuranceType"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="@{() -> viewModel.ShowInsuranceTypes()}"
+                    android:filterTouchesWhenObscured="true"
+                    android:drawableEnd="@drawable/graphitedown"
+                    android:drawableRight="@drawable/graphitedown"
+                    android:focusableInTouchMode="true"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:text="@{viewModel.insuranceType}"
+                    android:inputType="textCapCharacters"
+                    android:paddingTop="@dimen/scale_14_dim"
+                    android:paddingBottom="@dimen/scale_14_dim"
+                    android:textColor="@color/colordark"
+                    android:textColorHint="@color/colordark"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:hint="@string/insuranceType"
+                    android:textSize="@dimen/scale_15" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/vehicle_dateStart_InputLayout"
+                style="@style/turnKeyInput.Style"
+                android:theme="@style/turnKeyInput.Theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/scale_16_dim"
+                android:layout_marginEnd="@dimen/scale_16_dim"
+                android:layout_marginBottom="@dimen/scale_24_dim"
+                app:errorTextAppearance="@style/error_appearance">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/vehicle_dateStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="@{() -> viewModel.showDate()}"
+                    android:filterTouchesWhenObscured="true"
+                    android:drawableEnd="@drawable/graphitedown"
+                    android:drawableRight="@drawable/graphitedown"
+                    android:cursorVisible="false"
+                    android:focusableInTouchMode="true"
+                    android:focusable="false"
+                    android:text="@{viewModel.insuranceStartDate}"
+                    android:inputType="textCapCharacters"
+                    android:paddingTop="@dimen/scale_14_dim"
+                    android:paddingBottom="@dimen/scale_14_dim"
+                    android:textColor="@color/colordark"
+                    android:textColorHint="@color/colordark"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:hint="@string/dateStart"
+                    android:textSize="@dimen/scale_15" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/vehicle_dateEnd_InputLayout"
+                style="@style/turnKeyInput.Style"
+                android:theme="@style/turnKeyInput.Theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/scale_16_dim"
+                android:layout_marginEnd="@dimen/scale_16_dim"
+                android:layout_marginBottom="@dimen/scale_24_dim"
+                app:errorTextAppearance="@style/error_appearance">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/vehicle_dateEnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:drawableEnd="@drawable/graphitedown"
+                    android:drawableRight="@drawable/graphitedown"
+                    android:focusableInTouchMode="true"
+                    android:filterTouchesWhenObscured="true"
+                    android:focusable="false"
+                    android:cursorVisible="false"
+                    android:inputType="textCapCharacters"
+                    android:paddingTop="@dimen/scale_14_dim"
+                    android:text="@{viewModel.insuranceEndDate}"
+                    android:paddingBottom="@dimen/scale_14_dim"
+                    android:textColor="@color/colordark"
+                    android:textColorHint="@color/colordark"
+                    android:textAlignment="textStart"
+                    android:layout_gravity="start"
+                    android:hint="@string/dateEnd"
+                    android:textSize="@dimen/scale_15" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--coming in version two-->
+           <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/extensions"
+                android:padding="@dimen/scale_16_dim"
+                android:visibility="gone"
+                android:layout_marginBottom="@dimen/scale_45_dim"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/getComparison_btn"
+                    style="@style/turnKeyButton.Style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginStart="@dimen/scale_16_dim"
+                    android:layout_marginLeft="@dimen/scale_16_dim"
+                    android:layout_marginEnd="@dimen/scale_16_dim"
+                    android:layout_marginRight="@dimen/scale_16_dim"
+                    android:layout_marginBottom="@dimen/scale_16_dim"
+                    android:filterTouchesWhenObscured="true"
+                    android:onClick="@{() -> viewModel.SubmitVehicleDetails()}"
+                    android:paddingTop="@dimen/scale_15_dim"
+                    android:paddingBottom="@dimen/scale_15_dim"
+                    android:text="@string/proceed" />
+
+
+            </LinearLayout>
+
+
+
+
+            </ScrollView>
+
+        </LinearLayout>
+
+</layout>

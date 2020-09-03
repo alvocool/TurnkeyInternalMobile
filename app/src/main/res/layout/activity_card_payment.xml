@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.cardpayment.CardPaymentActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.cardpayment.CardPaymentViewModel" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="@dimen/scale_5_dim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar"
+                android:background="@color/white"
+                app:subtitleTextColor="@color/black"
+                app:title="@string/title_activity_card_payment"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                app:titleTextColor="@color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/paying"
+            android:textSize="@dimen/scale_20"
+            app:layout_constraintBottom_toTopOf="@+id/creditCardName_TextInputLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.28"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/cardAmountDetails"
+            style="@style/TextAppearance.Text.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginBottom="481dp"
+            android:text="@{viewModel.amountDetails}"
+            android:textSize="@dimen/scale_20"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textView11"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/creditCardName_TextInputLayout"
+            style="@style/turnKeyInput.Style"
+            android:theme="@style/turnKeyInput.Theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance"
+            app:helperText="@string/creditCardNameHint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardAmountDetails"
+            app:layout_constraintVertical_bias="0.0">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/creditCardName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cursorVisible="true"
+                android:hint="@string/creditCardName"
+                android:inputType="textCapCharacters"
+                android:paddingTop="@dimen/scale_16_dim"
+                android:paddingBottom="@dimen/scale_16_dim"
+                android:textColor="@color/colordark"
+                android:textColorHint="@color/colordark"
+                android:textSize="@dimen/scale_16" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/creditCardNumber_TextInputLayout"
+            style="@style/turnKeyInput.Style"
+            android:theme="@style/turnKeyInput.Theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            app:errorEnabled="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/creditCardName_TextInputLayout"
+            app:layout_constraintVertical_bias="0.0"
+            app:errorTextAppearance="@style/error_appearance">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/creditCardNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cursorVisible="true"
+                android:hint="@string/creditCardNumber"
+                android:inputType="number"
+                android:paddingTop="@dimen/scale_16_dim"
+                android:paddingBottom="@dimen/scale_16_dim"
+                android:textColor="@color/colordark"
+                android:textColorHint="@color/colordark"
+                android:textSize="@dimen/scale_16" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/cardDateExpire"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/dateExpire"
+            android:textSize="@dimen/scale_14"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/creditCardNumber_TextInputLayout"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/creditCardYearInputLayout"
+            style="@style/turnKeyInput.Style"
+            android:theme="@style/turnKeyInput.Theme"
+            android:layout_width="@dimen/scale_100_dim"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:layout_marginBottom="@dimen/scale_24_dim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/creditCardMonthInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/cardDateExpire"
+            app:layout_constraintVertical_bias="0.0"
+            android:layout_marginRight="@dimen/scale_16_dim"
+            app:errorTextAppearance="@style/error_appearance">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/creditCardYear"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:cursorVisible="false"
+                android:drawableEnd="@drawable/graphitedown"
+                android:drawableRight="@drawable/graphitedown"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/year"
+                android:inputType="textCapCharacters"
+                android:onClick='@{() -> viewModel.showDialog(2)}'
+                android:filterTouchesWhenObscured="true"
+                android:paddingTop="@dimen/scale_14_dim"
+                android:paddingBottom="@dimen/scale_14_dim"
+                android:textAlignment="textStart"
+                android:textColor="@color/colordark"
+                android:textColorHint="@color/colordark"
+                android:textSize="@dimen/scale_15" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/creditCardMonthInputLayout"
+            style="@style/turnKeyInput.Style"
+            android:theme="@style/turnKeyInput.Theme"
+            android:layout_width="@dimen/scale_100_dim"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:layout_marginBottom="@dimen/scale_24_dim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardDateExpire"
+            app:layout_constraintVertical_bias="0.0"
+            app:errorTextAppearance="@style/error_appearance">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/creditCardMonth"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:cursorVisible="false"
+                android:drawableEnd="@drawable/graphitedown"
+                android:drawableRight="@drawable/graphitedown"
+                android:focusable="false"
+                android:focusableInTouchMode="true"
+                android:hint="@string/month"
+                android:inputType="textCapCharacters"
+                android:onClick='@{() -> viewModel.showDialog(1)}'
+                android:filterTouchesWhenObscured="true"
+                android:paddingTop="@dimen/scale_14_dim"
+                android:paddingBottom="@dimen/scale_14_dim"
+                android:textAlignment="textStart"
+                android:textColor="@color/colordark"
+                android:textColorHint="@color/colordark"
+                android:textSize="@dimen/scale_15" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/cvvNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/cvvNumber"
+            android:textStyle="bold"
+            android:textSize="@dimen/scale_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/creditCardYearInputLayout"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/cvvNumberInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/cvvNumberInfo"
+            android:textSize="@dimen/scale_12"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvvNumber"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cvvNumber_TextInputLayout"
+            style="@style/turnKeyInput.Style"
+            android:theme="@style/turnKeyInput.Theme"
+            android:layout_width="@dimen/scale_100_dim"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            app:errorEnabled="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvvNumberInfo"
+            app:layout_constraintVertical_bias="0.0"
+            app:errorTextAppearance="@style/error_appearance">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cvvNumberInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cursorVisible="true"
+                android:hint="@string/cvv"
+                android:inputType="number"
+                android:maxLength="3"
+                android:paddingTop="@dimen/scale_16_dim"
+                android:paddingBottom="@dimen/scale_16_dim"
+                android:textColor="@color/colordark"
+                android:textColorHint="@color/colordark"
+                android:textSize="@dimen/scale_16" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/payCreditCard_btn"
+            style="@style/turnKeyButton.Style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginLeft="@dimen/scale_16_dim"
+            android:layout_marginTop="@dimen/scale_8_dim"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:layout_marginRight="@dimen/scale_16_dim"
+            android:layout_marginBottom="16dp"
+            android:background="@color/colorPrimaryDark"
+            android:enabled="@{viewModel.isLoading ? false : true}"
+            android:onClick="@{() -> viewModel.payNow()}"
+            android:filterTouchesWhenObscured="true"
+            android:paddingTop="@dimen/scale_15_dim"
+            android:paddingBottom="@dimen/scale_15_dim"
+            android:text="@string/payment"
+            android:textColor="@color/colorlight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cvvNumber_TextInputLayout"
+            app:layout_constraintVertical_bias="0.95" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    </LinearLayout>
+
+</layout>

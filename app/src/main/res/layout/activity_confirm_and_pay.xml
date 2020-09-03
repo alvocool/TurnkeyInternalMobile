@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout2"
+    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.confirmandpay.ConfirmAndPayActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.confirmandpay.ConfirmAndPayViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/confirmPayLayoutBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="@dimen/scale_5_dim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar"
+                android:background="@color/white"
+                app:subtitleTextColor="@color/black"
+                app:title="@string/title_activity_confirm_and_pay"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                app:titleTextColor="@color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bg_color"
+                android:orientation="vertical"
+                android:padding="@dimen/scale_16_dim"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.insurer}"
+                    android:textAppearance="@style/TextAppearance.Text.Medium"
+                    android:textSize="@dimen/scale_16"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@{viewModel.coverType}"
+                    android:textSize="@dimen/scale_12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/scale_16_dim"
+                    android:text="@{viewModel.quoteRef}"
+                    android:textSize="@dimen/scale_12" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/scale_16_dim"
+                    android:text="@{viewModel.inceptionDate}"
+                    android:textSize="@dimen/scale_12" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:text="@{viewModel.renewalsDate}"
+                        android:textSize="@dimen/scale_12" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/editPolicy"
+                        style="@style/turnKeyTextButton.Style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:enabled="@{viewModel.isLoading ? false : true}"
+                        android:filterTouchesWhenObscured="true"
+                        android:onClick="@{() -> viewModel.editQuote()}"
+                        android:text="@string/editPolicy"
+                        android:textSize="@dimen/scale_14"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <RadioGroup
+                android:id="@+id/paymentAmountRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                app:layout_constraintVertical_bias="0.0">
+
+                <RadioButton
+                    android:id="@+id/paymentAmount1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:enabled="@{viewModel.isLoading ? false : true}"
+                    android:checked="true"
+                    android:textSize="@dimen/scale_16"
+                    android:visibility="gone" />
+
+                <RadioButton
+                    android:id="@+id/paymentAmount2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:buttonTint="@color/colorPrimary"
+                    android:enabled="@{viewModel.isLoading ? false : true}"
+                    android:layout_gravity="start"
+                    android:textSize="@dimen/scale_16"
+                    android:visibility="gone" />
+            </RadioGroup>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/paymentQ_InputLayout"
+                style="@style/turnKeyInput.Style"
+                android:theme="@style/turnKeyInput.Theme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/scale_16_dim"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="@dimen/scale_16_dim"
+                android:layout_marginBottom="@dimen/scale_24_dim"
+                android:enabled="@{viewModel.isLoading ? false : true}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/paymentAmountRadioGroup"
+                app:layout_constraintVertical_bias="0.0"
+                app:errorTextAppearance="@style/error_appearance">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/paymentQ"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="start"
+                    android:cursorVisible="false"
+                    android:drawableEnd="@drawable/graphitedown"
+                    android:drawableRight="@drawable/graphitedown"
+                    android:focusable="false"
+                    android:focusableInTouchMode="true"
+                    android:hint="@string/paymentQ"
+                    android:inputType="textCapCharacters"
+                    android:onClick="@{() -> viewModel.showPaymentModes()}"
+                    android:filterTouchesWhenObscured="true"
+                    android:paddingTop="@dimen/scale_14_dim"
+                    android:paddingBottom="@dimen/scale_14_dim"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/colordark"
+                    android:textColorHint="@color/colordark"
+                    android:textSize="@dimen/scale_15" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <FrameLayout
+                android:id="@+id/payOptionBottomNav"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/translucent_black"
+                android:clickable="true"
+                android:focusable="true"
+                android:visibility="gone">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="@color/white"
+                    app:behavior_hideable="true"
+                    app:behavior_peekHeight="@dimen/scale_80_dim"
+                    app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="1.0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:divider="@color/black"
+                        android:dividerPadding="@dimen/scale_5_dim"
+                        android:orientation="vertical"
+                        android:showDividers="middle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/payOption1"
+                            style="@style/turnKeyTextButton.Style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:onClick='@{() -> viewModel.payOption(1)}'
+                            android:filterTouchesWhenObscured="true"
+                            android:padding="@dimen/scale_16_dim"
+                            android:text="@string/payOption1"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/payOption2"
+                            style="@style/turnKeyTextButton.Style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="start"
+                            android:onClick='@{() -> viewModel.payOption(2)}'
+                            android:filterTouchesWhenObscured="true"
+                            android:padding="@dimen/scale_16_dim"
+                            android:text="@string/payOption2"
+                            android:textAlignment="textStart"
+                            android:textColor="@color/black" />
+
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/policyTerms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/title_policy_terms_by_agreement"
+                android:textAlignment="center"
+                app:layout_constraintBottom_toTopOf="@+id/confirmPaymentbtn"
+                app:layout_constraintTop_toTopOf="@+id/linearLayout2"
+                app:layout_constraintVertical_bias="0.87"
+                android:gravity="center_horizontal" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/termsAndConditionsBtn"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="8dp"
+                android:enabled="@{viewModel.isLoading ? false : true}"
+                android:layout_marginBottom="8dp"
+                android:onClick="@{() -> viewModel.showTermsAndConditions()}"
+                android:filterTouchesWhenObscured="true"
+                android:paddingBottom="@dimen/scale_8_dim"
+                android:text="@string/termsAndConditionsHeader"
+                android:textColor="@color/colorPrimaryDark"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/confirmPaymentbtn"
+                app:layout_constraintTop_toBottomOf="@+id/policyTerms"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/turnKeyButton.Style"
+                android:id="@+id/confirmPaymentbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:enabled="@{viewModel.isLoading ? false : true}"
+                android:onClick="@{() -> viewModel.payNow()}"
+                android:filterTouchesWhenObscured="true"
+                android:paddingTop="@dimen/scale_15_dim"
+                android:paddingBottom="@dimen/scale_15_dim"
+                android:text="@string/payment"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+    </LinearLayout>
+
+</layout>

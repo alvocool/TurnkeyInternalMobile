@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.policy.PolicyEmptyItemViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/getInsuredbtn"
+            style="@style/Widget.MaterialComponents.Button.Icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:onClick="@{() -> viewModel.getInsured()}"
+            android:filterTouchesWhenObscured="true"
+            android:paddingTop="@dimen/scale_12_dim"
+            android:paddingBottom="@dimen/scale_12_dim"
+            android:paddingLeft="@dimen/scale_25_dim"
+            android:paddingRight="@dimen/scale_25_dim"
+            app:backgroundTint="@color/colorPrimaryLight"
+            android:text="@string/Btn_Get_insured"
+            app:cornerRadius="@dimen/scale_25_dim"
+            android:textSize="16sp"
+            android:textStyle="normal"
+            android:textColor="#ffffff"
+            android:lineSpacingExtra="4sp"
+            app:icon="@drawable/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/policyEmptyTitle2"
+            app:layout_constraintVertical_bias="0.089999974" />
+
+        <TextView
+            android:id="@+id/policyEmptyTitle1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:textColor="@color/gray"
+            android:text="@string/policyEmptyTitle1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.38" />
+
+        <TextView
+            android:id="@+id/policyEmptyTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:gravity="center"
+            android:paddingLeft="@dimen/scale_30_dim"
+            android:paddingEnd="@dimen/scale_30_dim"
+            android:paddingRight="@dimen/scale_30_dim"
+            android:text="@string/policyEmptyTitle2"
+            android:textColor="@color/black"
+            android:textSize="@dimen/scale_18"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/policyEmptyTitle1" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

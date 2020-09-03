@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.pay.manualpayment.DialogVerifyManualPaymentViewModel" />
+
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/scale_10_dim"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/scale_16_dim"
+        android:text="@string/manual_payment_info"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/mpesaCodeInputLayout"
+        style="@style/turnKeyInput.Style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/scale_16_dim"
+        android:layout_marginStart="@dimen/scale_16_dim"
+        android:layout_marginLeft="@dimen/scale_16_dim"
+        android:layout_marginEnd="@dimen/scale_16_dim"
+        android:layout_marginRight="@dimen/scale_16_dim"
+        android:theme="@style/turnKeyInput.Theme"
+        app:errorIconDrawable="@null"
+        app:errorTextAppearance="@style/error_appearance"
+        app:helperText="@string/mpesaManualCode">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/mpesaCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:cursorVisible="true"
+            android:hint="@string/mpesaCode"
+            android:inputType="textCapWords|textCapCharacters"
+            android:paddingTop="@dimen/scale_16_dim"
+            android:paddingBottom="@dimen/scale_16_dim"
+            android:textColor="@color/colordark"
+            android:textColorHint="@color/colordark"
+            android:textSize="@dimen/scale_16" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mpesaNumberInputLayout"
+                style="@style/turnKeyInput.Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/scale_16_dim"
+                android:layout_marginStart="@dimen/scale_16_dim"
+                android:layout_marginLeft="@dimen/scale_16_dim"
+                android:layout_marginEnd="@dimen/scale_16_dim"
+                android:layout_marginRight="@dimen/scale_16_dim"
+                android:theme="@style/turnKeyInput.Theme"
+                app:errorIconDrawable="@null"
+                app:errorTextAppearance="@style/error_appearance"
+                app:helperText="@string/mpesa_number_hint">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/mpesaNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cursorVisible="true"
+                    android:hint="@string/customer_mobile_no"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:paddingTop="@dimen/scale_16_dim"
+                    android:paddingBottom="@dimen/scale_16_dim"
+                    android:textColor="@color/colordark"
+                    android:textColorHint="@color/colordark"
+                    android:textSize="@dimen/scale_16" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/setDate_btn"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/scale_10_dim"
+                android:layout_marginBottom="@dimen/scale_10_dim"
+                android:onClick="@{() -> viewModel.verifyPayment()}"
+                android:filterTouchesWhenObscured="true"
+                android:text="@string/ok"
+                android:textAppearance="@style/TextAppearance.Text.Medium"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"
+                app:backgroundTint="@color/white" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel_btn"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_marginStart="@dimen/scale_100_dim"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/scale_10_dim"
+                android:layout_marginBottom="@dimen/scale_10_dim"
+                android:background="@color/colorPrimary"
+                android:onClick="@{() -> viewModel.close()}"
+                android:filterTouchesWhenObscured="true"
+                android:text="@string/cancel"
+                android:textAppearance="@style/TextAppearance.Text.Medium"
+                android:textColor="@color/gray"
+                android:textStyle="bold"
+                app:backgroundTint="@color/white"
+                android:layout_marginLeft="@dimen/scale_100_dim" />
+        </LinearLayout>
+
+
+</LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

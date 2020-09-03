@@ -1,0 +1,121 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        release {
+
+        }
+    }
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+    defaultConfig {
+        applicationId "com.turnkeyafrica.turnkeybankassurance"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+
+        multiDexEnabled true
+
+        versionCode generateVersionCode()
+        versionName generateVersionName()
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+        signingConfig signingConfigs.release
+    }
+    buildTypes {
+        android.applicationVariants.all { variant ->
+            variant.outputs.all { output ->
+                def appName = "TurnKeyClientApp"
+                outputFileName = appName + "-${output.baseName}-${variant.versionName}.apk"
+            }
+        }
+        debug {
+            buildConfigField 'String', 'BASE_URL', '"https://sukuti.turnkeyafrica.com/"'
+            buildConfigField('String', 'MA_KEY', '"1db9ca31-7c8c-43f6-968a-72e0ac32c801"')
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'BASE_URL', '"https://sukuti.turnkeyafrica.com/"'
+            buildConfigField('String', 'MA_KEY', '"1db9ca31-7c8c-43f6-968a-72e0ac32c801"')
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures{
+        dataBinding true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation "com.microsoft.appcenter:appcenter-analytics:$rootProject.appCenterSdkVersion"
+    implementation "com.microsoft.appcenter:appcenter-crashes:$rootProject.appCenterSdkVersion"
+    implementation "com.microsoft.appcenter:appcenter-distribute:$rootProject.appCenterSdkVersion"
+    implementation "androidx.appcompat:appcompat:$rootProject.supportLibraryVersion"
+    implementation "androidx.recyclerview:recyclerview:$rootProject.recyclerViewVersion"
+    implementation "androidx.cardview:cardview:$rootProject.cardViewVersion"
+    implementation "com.google.android.material:material:$rootProject.materialVersion"
+    implementation "androidx.vectordrawable:vectordrawable:$rootProject.vectorDrawableVersion"
+    implementation "androidx.vectordrawable:vectordrawable-animated:$rootProject.animatedVectorDrawableVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
+    implementation "com.amitshekhar.android:rx2-android-networking:$rootProject.rx2FastAndroidNetworking"
+    implementation "com.android.support:multidex:$rootProject.multiDex"
+    implementation "com.google.firebase:firebase-messaging:$rootProject.firebase"
+    implementation "com.google.firebase:firebase-iid:$rootProject.firebase"
+    implementation "uk.co.chrisjenx:calligraphy:$rootProject.calligraphyVersion"
+    implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    implementation "com.google.code.gson:gson:$rootProject.gsonVersion"
+    implementation "org.apache.commons:commons-lang3:$rootProject.commonsLang3"
+    implementation "com.github.stfalcon:smsverifycatcher:$rootProject.smsverifycatcher"
+    implementation "com.google.dagger:dagger:$rootProject.dagger2Version"
+    annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+    annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.dagger2Version"
+    implementation "com.google.dagger:dagger-android-support:$rootProject.dagger2Version"
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxjava2Version"
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
+    implementation "com.iceteck.silicompressorr:silicompressor:$rootProject.siliCompressor"
+
+
+    implementation "com.jakewharton.timber:timber:$rootProject.timberVersion"
+    testImplementation "junit:junit:$rootProject.ext.junitVersion"
+    testImplementation "org.mockito:mockito-core:$rootProject.mockitoVersion"
+    testAnnotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$rootProject.espressoVersion"
+    androidTestImplementation "org.mockito:mockito-core:$rootProject.mockitoVersion"
+    androidTestAnnotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
+    implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycleVersion"
+    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$rootProject.lifecycleVersion"
+
+
+    debugImplementation "com.amitshekhar.android:debug-db:$rootProject.debugDBVersion"
+    implementation project(path: ':AbsaMobileAppSecurity')
+}
+
+configurations.all {
+    resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
+}	
+
+private Integer generateVersionCode() {
+	return rootProject.ext.minSdkVersion * 10000000 + rootProject.ext.versionMajor * 10000 + rootProject.ext.versionMinor * 100 + rootProject.ext.versionPatch
+}
+
+private String generateVersionName() {
+	String versionName = "${rootProject.ext.versionMajor}.${rootProject.ext.versionMinor}.${rootProject.ext.versionPatch}"
+	if (rootProject.ext.versionClassifier == null && rootProject.ext.isSnapshot) {
+		rootProject.ext.versionClassifier = "BETA"
+	}
+
+	if (rootProject.ext.versionClassifier != null) {
+		versionName += "-" + rootProject.ext.versionClassifier
+	}
+	return versionName
+}
+
+apply plugin: 'com.google.gms.google-services'

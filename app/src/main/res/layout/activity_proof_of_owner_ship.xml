@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.proofofownership.ProofOfOwnerShipActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.proofofownership.ProofOfOwnerShipViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/contactUsLayoutBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="@dimen/scale_5_dim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar"
+                android:background="@color/white"
+                app:subtitleTextColor="@color/black"
+                app:title="@string/title_activity_proof_of_owner_ship"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                app:titleTextColor="@color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:id="@+id/Q1_quote_step1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="@string/Q1_quote_step1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contactUsLayoutBar"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/Q2_quote_step1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/Q2_quote_step1"
+            android:textStyle="bold"
+            style="@style/TextAppearance.Text.Bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Q1_quote_step1"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageButton
+            android:id="@+id/Proof_of_OwnerShip"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scale_200_dim"
+            android:layout_marginStart="16dp"
+            android:onClick="@{() -> viewModel.showPictureOptions()}"
+            android:filterTouchesWhenObscured="true"
+            android:background="@drawable/imageviewpadding"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toTopOf="@+id/Q1_quote_step1btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/Q2_quote_step1"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/picbg"
+            android:contentDescription="@string/Q3_quote_step1" />
+
+        <TextView
+            android:id="@+id/Q3_quote_step1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Q3_quote_step1"
+            android:onClick="@{() -> viewModel.showPictureOptions()}"
+            android:filterTouchesWhenObscured="true"
+            app:layout_constraintBottom_toBottomOf="@+id/Proof_of_OwnerShip"
+            app:layout_constraintEnd_toEndOf="@+id/Proof_of_OwnerShip"
+            app:layout_constraintStart_toStartOf="@+id/Proof_of_OwnerShip"
+            app:layout_constraintTop_toTopOf="@+id/Proof_of_OwnerShip"
+            app:layout_constraintVertical_bias="0.76" />
+
+        <com.google.android.material.chip.Chip
+            style="@style/Widget.MaterialComponents.Chip.Entry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/removePicture"
+            android:text="@string/remove"
+            android:visibility="gone"
+            android:onClick="@{() -> viewModel.removePicture()}"
+            android:filterTouchesWhenObscured="true"
+            app:layout_constraintBottom_toBottomOf="@+id/Proof_of_OwnerShip"
+            app:layout_constraintEnd_toEndOf="@+id/Proof_of_OwnerShip"
+            app:layout_constraintStart_toStartOf="@+id/Proof_of_OwnerShip"
+            app:layout_constraintTop_toTopOf="@+id/Proof_of_OwnerShip"
+            app:layout_constraintVertical_bias="0.82" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/proofBottomNav"
+            android:visibility="gone"
+            android:clickable="true"
+            android:background="@color/translucent_black"
+            android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_gravity="bottom"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/white"
+            app:behavior_hideable="true"
+            app:behavior_peekHeight="@dimen/scale_80_dim"
+            app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+            app:layout_constraintVertical_bias="1.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/black"
+                android:dividerPadding="@dimen/scale_5_dim"
+                android:orientation="vertical"
+                android:showDividers="middle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/takePhoto"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:onClick="@{() -> viewModel.takePhoto()}"
+                    android:filterTouchesWhenObscured="true"
+                    android:padding="@dimen/scale_16_dim"
+                    android:text="@string/takePhoto"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/choosePhoto"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:onClick="@{() -> viewModel.choosePhoto()}"
+                    android:filterTouchesWhenObscured="true"
+                    android:padding="@dimen/scale_16_dim"
+                    android:text="@string/choosePhoto"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/turnKeyButton.Style"
+            android:id="@+id/Q1_quote_step1btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:onClick="@{() -> viewModel.nextStep()}"
+            android:filterTouchesWhenObscured="true"
+            android:paddingTop="@dimen/scale_15_dim"
+            android:paddingBottom="@dimen/scale_15_dim"
+            android:text="@string/proceed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

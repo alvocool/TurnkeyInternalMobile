@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.register.RegisterActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.register.RegisterViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="@dimen/scale_5_dim">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar"
+                app:subtitleTextColor="@color/black"
+                app:title="@string/title_activity_register"
+                android:background="@color/white"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                app:titleTextColor="@color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/white">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/customer_first_name_InputLayout"
+        style="@style/turnKeyInput.Style"
+        android:theme="@style/turnKeyInput.Theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/scale_24_dim"
+        android:layout_marginStart="@dimen/scale_16_dim"
+        android:layout_marginEnd="@dimen/scale_16_dim"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/error_appearance">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/customer_first_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cursorVisible="true"
+            android:hint="@string/customer_first_name"
+            android:inputType="text"
+            android:paddingTop="@dimen/scale_16_dim"
+            android:paddingBottom="@dimen/scale_16_dim"
+            android:textColor="@color/colordark"
+            android:textColorHint="@color/colordark"
+            android:textSize="@dimen/scale_16" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/customer_surname_InputLayout"
+            style="@style/turnKeyInput.Style"
+            android:theme="@style/turnKeyInput.Theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:hint="@string/customer_surname"
+            app:errorEnabled="true"
+            app:errorTextAppearance="@style/error_appearance">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/customer_surname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:cursorVisible="true"
+                android:inputType="text"
+                android:paddingTop="@dimen/scale_16_dim"
+                android:paddingBottom="@dimen/scale_16_dim"
+                android:textColor="@color/colordark"
+                android:textColorHint="@color/colordark"
+                android:textSize="@dimen/scale_16" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/customer_mobile_no_InputLayout"
+        style="@style/turnKeyInput.Style"
+        android:theme="@style/turnKeyInput.Theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/scale_16_dim"
+        android:layout_marginEnd="@dimen/scale_16_dim"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/error_appearance">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/customer_mobile_no"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cursorVisible="true"
+            android:hint="@string/customer_mobile_no"
+            android:inputType="phone"
+            android:paddingTop="@dimen/scale_16_dim"
+            android:paddingBottom="@dimen/scale_16_dim"
+            android:textColor="@color/colordark"
+            android:textColorHint="@color/colordark"
+            android:textSize="@dimen/scale_16" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/customer_email_address_InputLayout"
+        style="@style/turnKeyInput.Style"
+        android:theme="@style/turnKeyInput.Theme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/scale_16_dim"
+        android:layout_marginEnd="@dimen/scale_16_dim"
+        app:errorEnabled="true"
+        app:errorTextAppearance="@style/error_appearance">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/customer_email_address"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:cursorVisible="true"
+            android:hint="@string/customer_email_address"
+            android:inputType="textWebEmailAddress"
+            android:paddingTop="@dimen/scale_16_dim"
+            android:paddingBottom="@dimen/scale_16_dim"
+            android:textColor="@color/colordark"
+            android:textColorHint="@color/colordark"
+            android:textSize="@dimen/scale_16" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="bottom"
+            >
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/title_terms_by_agreement"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/scale_100_dim"
+                android:gravity="center_horizontal" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/termsAndConditionsBtn"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/scale_16_dim"
+                android:layout_marginEnd="@dimen/scale_16_dim"
+                android:onClick="@{() -> viewModel.showTermsAndConditions()}"
+                android:filterTouchesWhenObscured="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="@dimen/scale_8_dim"
+                android:paddingBottom="@dimen/scale_8_dim"
+                android:text="@string/termsAndConditionsHeader"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/register_btn"
+                style="@style/turnKeyButton.Style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/scale_16_dim"
+                android:layout_marginEnd="@dimen/scale_16_dim"
+                android:onClick="@{() -> viewModel.Register()}"
+                android:paddingTop="@dimen/scale_16_dim"
+                android:filterTouchesWhenObscured="true"
+                android:layout_marginBottom="@dimen/scale_16_dim"
+                android:paddingBottom="@dimen/scale_16_dim"
+                android:text="@string/proceed"
+                android:textColor="@color/colorlight" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    </ScrollView>
+
+    </LinearLayout>
+</layout>

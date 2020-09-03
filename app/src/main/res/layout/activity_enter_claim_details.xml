@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.enterclaimdetails.EnterClaimDetailsActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.enterclaimdetails.EnterClaimDetailsViewModel" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/appBarLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:elevation="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    style="@style/Toolbar"
+                    android:background="@color/white"
+                    app:subtitleTextColor="@color/black"
+                    app:title="@string/title_activity_claim_details"
+                    app:titleTextAppearance="@style/Toolbar.TitleText"
+                    app:titleTextColor="@color/black" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/light_gray" />
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:fillViewport="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/claimShortDescInputLayout"
+                                style="@style/turnKeyInput.Style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginTop="24dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginRight="16dp"
+                                android:theme="@style/turnKeyInput.Theme"
+                                app:errorIconDrawable="@null"
+                                app:errorTextAppearance="@style/error_appearance"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/appBarLayout2">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/claimShortDesc"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="144dp"
+                                    android:cursorVisible="true"
+                                    android:gravity="top"
+                                    android:hint="@string/incidentDescriptionDisclaimer"
+                                    android:inputType="textCapSentences|textMultiLine"
+                                    android:lines="30"
+                                    android:paddingTop="@dimen/scale_16_dim"
+                                    android:paddingBottom="@dimen/scale_16_dim"
+                                    android:textColor="@color/colordark"
+                                    android:textColorHint="@color/colordark"
+                                    android:textSize="@dimen/scale_16" />
+
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/incidentDate_InputLayout"
+                                style="@style/turnKeyInput.Style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/scale_16_dim"
+                                android:layout_marginTop="@dimen/scale_24_dim"
+                                android:layout_marginEnd="@dimen/scale_16_dim"
+                                android:layout_marginBottom="@dimen/scale_24_dim"
+                                android:theme="@style/turnKeyInput.Theme"
+                                app:errorTextAppearance="@style/error_appearance">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/incidentDate"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="start"
+                                    android:cursorVisible="false"
+                                    android:drawableEnd="@drawable/graphite"
+                                    android:drawableRight="@drawable/graphite"
+                                    android:filterTouchesWhenObscured="true"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="true"
+                                    android:hint="@string/incidentDate"
+                                    android:inputType="textCapCharacters"
+                                    android:onClick="@{() -> viewModel.showDate()}"
+                                    android:paddingTop="@dimen/scale_14_dim"
+                                    android:paddingBottom="@dimen/scale_14_dim"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/colordark"
+                                    android:textColorHint="@color/colordark"
+                                    android:textSize="@dimen/scale_15" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/propertyId_InputLayout"
+                                style="@style/turnKeyInput.Style"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/scale_16_dim"
+                                android:layout_marginEnd="@dimen/scale_16_dim"
+                                android:layout_marginBottom="@dimen/scale_24_dim"
+                                android:theme="@style/turnKeyInput.Theme"
+                                app:errorTextAppearance="@style/error_appearance">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/propertyId"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_gravity="start"
+                                    android:cursorVisible="false"
+                                    android:drawableEnd="@drawable/graphite"
+                                    android:drawableRight="@drawable/graphite"
+                                    android:filterTouchesWhenObscured="true"
+                                    android:focusable="false"
+                                    android:focusableInTouchMode="true"
+                                    android:hint="@string/vehiclePlate"
+                                    android:inputType="textCapCharacters"
+                                    android:onClick="@{() -> viewModel.showPropertyId()}"
+                                    android:paddingTop="@dimen/scale_14_dim"
+                                    android:paddingBottom="@dimen/scale_14_dim"
+                                    android:textAlignment="textStart"
+                                    android:textColor="@color/colordark"
+                                    android:textColorHint="@color/colordark"
+                                    android:textSize="@dimen/scale_15" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/scale_24_dim">
+
+                                <ImageButton
+                                    android:id="@+id/incidentReportPicker"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/scale_140_dim"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:adjustViewBounds="true"
+                                    android:background="@drawable/imageviewpadding"
+                                    android:contentDescription="@string/Upload_id_info"
+                                    android:filterTouchesWhenObscured="true"
+                                    android:onClick='@{() -> viewModel.showPictureOptions(1)}'
+                                    android:scaleType="centerInside"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:srcCompat="@drawable/picbg" />
+
+                                <TextView
+                                    android:id="@+id/incidentReportPickerInfo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:filterTouchesWhenObscured="true"
+                                    android:onClick='@{() -> viewModel.showPictureOptions(1)}'
+                                    android:text="@string/add_incident_report_pic"
+                                    app:layout_constraintBottom_toBottomOf="@+id/incidentReportPicker"
+                                    app:layout_constraintEnd_toEndOf="@+id/incidentReportPicker"
+                                    app:layout_constraintStart_toStartOf="@+id/incidentReportPicker"
+                                    app:layout_constraintTop_toTopOf="@+id/incidentReportPicker"
+                                    app:layout_constraintVertical_bias="0.76" />
+
+                                <com.google.android.material.chip.Chip
+                                    android:id="@+id/removePicture"
+                                    style="@style/Widget.MaterialComponents.Chip.Entry"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:filterTouchesWhenObscured="true"
+                                    android:onClick="@{() -> viewModel.removePicture(1)}"
+                                    android:text="@string/remove"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.95" />
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/scale_24_dim">
+
+                                <ImageButton
+                                    android:id="@+id/driverLicencePicker"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/scale_140_dim"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginLeft="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginRight="16dp"
+                                    android:adjustViewBounds="true"
+                                    android:background="@drawable/imageviewpadding"
+                                    android:contentDescription="@string/Upload_id_info"
+                                    android:filterTouchesWhenObscured="true"
+                                    android:onClick='@{() -> viewModel.showPictureOptions(2)}'
+                                    android:scaleType="centerInside"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.0"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0"
+                                    app:srcCompat="@drawable/picbg" />
+
+                                <TextView
+                                    android:id="@+id/driverLicencePickerInfo"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:filterTouchesWhenObscured="true"
+                                    android:onClick='@{() -> viewModel.showPictureOptions(2)}'
+                                    android:text="@string/add_driving_licence_pic"
+                                    app:layout_constraintBottom_toBottomOf="@+id/driverLicencePicker"
+                                    app:layout_constraintEnd_toEndOf="@+id/driverLicencePicker"
+                                    app:layout_constraintStart_toStartOf="@+id/driverLicencePicker"
+                                    app:layout_constraintTop_toTopOf="@+id/driverLicencePicker"
+                                    app:layout_constraintVertical_bias="0.76" />
+
+                                <com.google.android.material.chip.Chip
+                                    android:id="@+id/removePicture2"
+                                    style="@style/Widget.MaterialComponents.Chip.Entry"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:filterTouchesWhenObscured="true"
+                                    android:onClick="@{() -> viewModel.removePicture(2)}"
+                                    android:text="@string/remove"
+                                    android:visibility="gone"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.95" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </LinearLayout>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/register_btn"
+                            style="@style/turnKeyButton.Style"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/scale_16_dim"
+                            android:layout_marginEnd="@dimen/scale_16_dim"
+                            android:layout_marginBottom="@dimen/scale_16_dim"
+                            android:filterTouchesWhenObscured="true"
+                            android:onClick="@{() -> viewModel.verifyClaimDetails()}"
+                            android:paddingTop="@dimen/scale_16_dim"
+                            android:paddingBottom="@dimen/scale_16_dim"
+                            android:text="@string/proceed"
+                            android:textColor="@color/colorlight" />
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </ScrollView>
+        </LinearLayout>
+        <FrameLayout
+        android:id="@+id/requestBottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/translucent_black"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@color/white"
+            app:behavior_hideable="true"
+            app:behavior_peekHeight="@dimen/scale_80_dim"
+            app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@color/black"
+                android:dividerPadding="@dimen/scale_5_dim"
+                android:orientation="vertical"
+                android:showDividers="middle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/takePhoto"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:filterTouchesWhenObscured="true"
+                    android:onClick="@{() -> viewModel.takePhoto()}"
+                    android:padding="@dimen/scale_16_dim"
+                    android:text="@string/takePhoto"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/choosePhoto"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:filterTouchesWhenObscured="true"
+                    android:onClick="@{() -> viewModel.choosePhoto()}"
+                    android:padding="@dimen/scale_16_dim"
+                    android:text="@string/choosePhoto"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/black" />
+
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+    </FrameLayout>
+</layout>

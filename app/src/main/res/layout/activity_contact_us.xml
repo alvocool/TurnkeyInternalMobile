@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout tools:context="com.turnkeyafrica.turnkeybankassurance.ui.contactus.ContactUsActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.contactus.ContactUsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/contactUsLayoutBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="@dimen/scale_5_dim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar"
+                android:background="@color/white"
+                app:subtitleTextColor="@color/black"
+                app:title="@string/title_activity_contact_us"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                app:titleTextColor="@color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <TextView
+            android:id="@+id/contactUsGeneral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginLeft="@dimen/scale_16_dim"
+            android:layout_marginTop="@dimen/scale_16_dim"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:layout_marginRight="@dimen/scale_16_dim"
+            android:layout_marginBottom="@dimen/scale_16_dim"
+            android:textAppearance="@style/TextAppearance.Text.Medium"
+            android:text="@string/general"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contactUsLayoutBar"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/icon_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginLeft="@dimen/scale_16_dim"
+            android:layout_marginTop="@dimen/scale_16_dim"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:layout_marginRight="@dimen/scale_16_dim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contactUsGeneral"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/icon_phone"
+            android:contentDescription="@string/mainSupportNumber" />
+
+        <ImageView
+            android:id="@+id/icon_phone2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginLeft="@dimen/scale_16_dim"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:layout_marginRight="@dimen/scale_16_dim"
+            android:contentDescription="@string/mainSupportNumber"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/supportNumber"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/icon_phone" />
+
+        <TextView
+            android:id="@+id/main_switchboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginLeft="@dimen/scale_16_dim"
+            android:layout_marginTop="@dimen/scale_16_dim"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:layout_marginRight="@dimen/scale_16_dim"
+            android:layout_marginBottom="@dimen/scale_16_dim"
+            android:text="@string/main_switchboard"
+            android:textColor="@color/black_effective"
+            android:textSize="@dimen/scale_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/icon_phone"
+            app:layout_constraintTop_toBottomOf="@+id/contactUsGeneral"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/cell_switchboard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginLeft="@dimen/scale_16_dim"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:layout_marginRight="@dimen/scale_16_dim"
+            android:layout_marginBottom="@dimen/scale_16_dim"
+            android:text="@string/cell"
+            android:textColor="@color/black_effective"
+            android:textSize="@dimen/scale_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/icon_phone"
+            app:layout_constraintTop_toBottomOf="@+id/supportNumber"
+            app:layout_constraintVertical_bias="0.00999999" />
+
+        <TextView
+            android:id="@+id/supportNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginLeft="@dimen/scale_16_dim"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:layout_marginRight="@dimen/scale_16_dim"
+            android:layout_marginBottom="@dimen/scale_16_dim"
+            android:text="@string/mainSupportNumber"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/icon_phone"
+            app:layout_constraintTop_toBottomOf="@+id/main_switchboard"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/cellNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginLeft="@dimen/scale_16_dim"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:layout_marginRight="@dimen/scale_16_dim"
+            android:layout_marginBottom="@dimen/scale_16_dim"
+            android:text="@string/cellOne"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/icon_phone"
+            app:layout_constraintTop_toBottomOf="@+id/cell_switchboard"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/cellNumber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginLeft="@dimen/scale_16_dim"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:layout_marginRight="@dimen/scale_16_dim"
+            android:layout_marginBottom="@dimen/scale_16_dim"
+            android:text="@string/cellTwo"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/icon_phone"
+            app:layout_constraintTop_toBottomOf="@+id/cellNumber"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/icon_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="@string/supportEmail"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cellNumber2"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/mail" />
+
+        <TextView
+            android:id="@+id/insurance_app_support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/insurance_app_support"
+            android:textColor="@color/black_effective"
+            android:textSize="@dimen/scale_14"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/icon_mail"
+            app:layout_constraintTop_toBottomOf="@+id/cellNumber2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/supportEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="@string/supportEmail"
+            android:textColor="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/icon_mail"
+            app:layout_constraintTop_toBottomOf="@+id/insurance_app_support"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/insurance_app_support_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:text="@string/insurance_app_support_other"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/supportEmail" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

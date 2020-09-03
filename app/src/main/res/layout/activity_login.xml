@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.login.LoginActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.login.LoginViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userNumberInputLayout"
+            style="@style/turnKeyInput.Style"
+            android:theme="@style/turnKeyInput.Theme"
+            app:errorIconDrawable="@null"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginLeft="@dimen/scale_16_dim"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:layout_marginRight="@dimen/scale_16_dim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.36"
+            app:helperText="@string/customer_mobile_no_hint"
+            app:errorTextAppearance="@style/error_appearance">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUserNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:cursorVisible="true"
+                android:hint="@string/customer_mobile_no"
+                android:inputType="number"
+                android:maxLength="10"
+                android:paddingTop="@dimen/scale_16_dim"
+                android:paddingBottom="@dimen/scale_16_dim"
+                android:textColor="@color/colordark"
+                android:textColorHint="@color/colordark"
+                android:textSize="@dimen/scale_16" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/reg_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/scale_8_dim"
+            android:text="@string/reg_details"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/scale_16"
+            app:layout_constraintBottom_toTopOf="@+id/lgn_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userNumberInputLayout"
+            app:layout_constraintVertical_bias="0.92" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/reg_btn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/scale_8_dim"
+            android:filterTouchesWhenObscured="true"
+            android:onClick="@{() -> viewModel.registerNew()}"
+            android:text="@string/reg_btn"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/scale_16"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/lgn_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/reg_details"
+            app:layout_constraintTop_toBottomOf="@+id/userNumberInputLayout"
+            app:layout_constraintVertical_bias="0.96" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/lgn_btn"
+            style="@style/turnKeyButton.Style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginLeft="@dimen/scale_16_dim"
+            android:layout_marginTop="@dimen/scale_8_dim"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:layout_marginRight="@dimen/scale_16_dim"
+            android:onClick="@{() -> viewModel.LoginClick()}"
+            android:filterTouchesWhenObscured="true"
+            android:paddingTop="@dimen/scale_15_dim"
+            android:paddingBottom="@dimen/scale_15_dim"
+            android:text="@string/proceed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/userNumberInputLayout"
+            app:layout_constraintVertical_bias="0.95" />
+
+
+
+
+        <TextView
+            android:id="@+id/login_description2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scale_8_dim"
+            android:layout_marginLeft="@dimen/scale_8_dim"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/scale_8_dim"
+            android:layout_marginRight="@dimen/scale_8_dim"
+            android:layout_marginBottom="@dimen/scale_8_dim"
+            android:text="@string/login_description2"
+            android:textSize="@dimen/scale_16"
+            app:layout_constraintBottom_toTopOf="@+id/userNumberInputLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/login_description"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/login_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/scale_24"
+            android:layout_marginStart="@dimen/scale_8_dim"
+            android:layout_marginLeft="@dimen/scale_8_dim"
+            android:layout_marginTop="@dimen/scale_8_dim"
+            android:layout_marginEnd="@dimen/scale_8_dim"
+            android:layout_marginRight="@dimen/scale_8_dim"
+            android:layout_marginBottom="@dimen/scale_8_dim"
+            android:text="@string/login_description"
+            app:layout_constraintBottom_toTopOf="@+id/userNumberInputLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.58000004" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginLeft="@dimen/scale_16_dim"
+            android:layout_marginTop="@dimen/scale_8_dim"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginBottom="@dimen/scale_8_dim"
+            android:text="@string/login_description3"
+            android:textColor="@color/gray"
+            app:layout_constraintBottom_toTopOf="@+id/reg_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintLeft_toLeftOf="@id/userNumberInputLayout"
+            app:layout_constraintRight_toLeftOf="@id/userNumberInputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/userNumberInputLayout"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

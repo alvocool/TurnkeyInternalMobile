@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "187073828910",
+    "firebase_url": "https://banca-mobile.firebaseio.com",
+    "project_id": "banca-mobile",
+    "storage_bucket": "banca-mobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187073828910:android:45321a02edb86b789be7bf",
+        "android_client_info": {
+          "package_name": "com.turnkeyafrica.turnkeybankassurance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187073828910-1um6hh9e5l8gnqvg4a70e55vs3iqk0k1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKGVHoBbiEM0L_jHN_-6pt36_5OoCZkYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187073828910-1um6hh9e5l8gnqvg4a70e55vs3iqk0k1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187073828910:android:159ec57ec6ff41e69be7bf",
+        "android_client_info": {
+          "package_name": "com.turnkeyafrica.bankassurance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187073828910-1um6hh9e5l8gnqvg4a70e55vs3iqk0k1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKGVHoBbiEM0L_jHN_-6pt36_5OoCZkYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187073828910-1um6hh9e5l8gnqvg4a70e55vs3iqk0k1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.capturedamageimages.CaptureDamageImagesActivity">
+
+
+    <data>
+
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.capturedamageimages.CaptureDamageImagesViewModel" />
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/captureDamageImagesToolBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="@dimen/scale_5_dim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar"
+                android:background="@color/white"
+                app:subtitleTextColor="@color/black"
+                app:title="@string/title_activity_claim_details"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                app:titleTextColor="@color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/scale_24_dim"
+        android:layout_marginBottom="@dimen/scale_24_dim">
+
+        <ImageButton
+            android:id="@+id/damagePic1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/scale_160_dim"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/imageviewpadding"
+            android:contentDescription="@string/Upload_id_info"
+            android:filterTouchesWhenObscured="true"
+            android:onClick='@{() -> viewModel.showPictureOptions(1)}'
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/picbg" />
+
+        <TextView
+            android:id="@+id/damagePicInfo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick='@{() -> viewModel.showPictureOptions(1)}'
+            android:filterTouchesWhenObscured="true"
+            android:text="@string/add_damage_pic"
+            app:layout_constraintBottom_toBottomOf="@+id/damagePic1"
+            app:layout_constraintEnd_toEndOf="@+id/damagePic1"
+            app:layout_constraintStart_toStartOf="@+id/damagePic1"
+            app:layout_constraintTop_toTopOf="@+id/damagePic1"
+            app:layout_constraintVertical_bias="0.76" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/removePicture1"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:filterTouchesWhenObscured="true"
+                android:onClick="@{() -> viewModel.removePicture(1)}"
+                android:text="@string/remove"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.95" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/scale_24_dim">
+
+            <ImageButton
+                android:id="@+id/damagePic2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scale_160_dim"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/imageviewpadding"
+                android:contentDescription="@string/Upload_id_info"
+                android:filterTouchesWhenObscured="true"
+                android:onClick='@{() -> viewModel.showPictureOptions(2)}'
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/picbg" />
+
+            <TextView
+                android:id="@+id/damagePicInfo2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick='@{() -> viewModel.showPictureOptions(2)}'
+                android:filterTouchesWhenObscured="true"
+                android:text="@string/add_damage_pic"
+                app:layout_constraintBottom_toBottomOf="@+id/damagePic2"
+                app:layout_constraintEnd_toEndOf="@+id/damagePic2"
+                app:layout_constraintStart_toStartOf="@+id/damagePic2"
+                app:layout_constraintTop_toTopOf="@+id/damagePic2"
+                app:layout_constraintVertical_bias="0.76" />
+
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/removePicture2"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:filterTouchesWhenObscured="true"
+                android:onClick="@{() -> viewModel.removePicture(2)}"
+                android:text="@string/remove"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.95" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/scale_24_dim">
+
+            <ImageButton
+                android:id="@+id/damagePic3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/scale_160_dim"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:adjustViewBounds="true"
+                android:background="@drawable/imageviewpadding"
+                android:contentDescription="@string/Upload_id_info"
+                android:filterTouchesWhenObscured="true"
+                android:onClick='@{() -> viewModel.showPictureOptions(3)}'
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/picbg" />
+
+            <TextView
+                android:id="@+id/damagePicInfo3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick='@{() -> viewModel.showPictureOptions(3)}'
+                android:filterTouchesWhenObscured="true"
+                android:text="@string/add_damage_pic"
+                app:layout_constraintBottom_toBottomOf="@+id/damagePic3"
+                app:layout_constraintEnd_toEndOf="@+id/damagePic3"
+                app:layout_constraintStart_toStartOf="@+id/damagePic3"
+                app:layout_constraintTop_toTopOf="@+id/damagePic3"
+                app:layout_constraintVertical_bias="0.76" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/removePicture3"
+                style="@style/Widget.MaterialComponents.Chip.Entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:filterTouchesWhenObscured="true"
+                android:onClick="@{() -> viewModel.removePicture(3)}"
+                android:text="@string/remove"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.95" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/turnKeyButton.Style"
+                    android:id="@+id/Continue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:enabled="@{viewModel.isLoading ? false : true}"
+                    android:onClick="@{() -> viewModel.next()}"
+                    android:filterTouchesWhenObscured="true"
+                    android:paddingTop="@dimen/scale_15_dim"
+                    android:paddingBottom="@dimen/scale_15_dim"
+                    android:text="@string/proceed" />
+
+            </LinearLayout>
+        </ScrollView>
+</LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/requestBottomNav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/translucent_black"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:background="@color/white"
+                app:behavior_hideable="true"
+                app:behavior_peekHeight="@dimen/scale_80_dim"
+                app:layout_behavior="android.support.design.widget.BottomSheetBehavior"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="1.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:divider="@color/black"
+                    android:dividerPadding="@dimen/scale_5_dim"
+                    android:orientation="vertical"
+                    android:showDividers="middle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/takePhoto"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:filterTouchesWhenObscured="true"
+                        android:onClick="@{() -> viewModel.takePhoto()}"
+                        android:padding="@dimen/scale_16_dim"
+                        android:text="@string/takePhoto"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/choosePhoto"
+                        style="@style/Widget.MaterialComponents.Button.TextButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:filterTouchesWhenObscured="true"
+                        android:onClick="@{() -> viewModel.choosePhoto()}"
+                        android:padding="@dimen/scale_16_dim"
+                        android:text="@string/choosePhoto"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/black" />
+
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </FrameLayout>
+    </FrameLayout>
+</layout>

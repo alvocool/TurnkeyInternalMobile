@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.otp.OtpActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.turnkeybankassurance.ui.otp.OtpViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="@dimen/scale_5_dim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar"
+                android:background="@color/white"
+                app:subtitleTextColor="@color/black"
+                app:title="@string/title_activity_otp"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                app:titleTextColor="@color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <TextView
+            android:id="@+id/otpDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginLeft="@dimen/scale_16_dim"
+            android:layout_marginTop="@dimen/scale_16_dim"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:layout_marginRight="@dimen/scale_16_dim"
+            android:layout_marginBottom="@dimen/scale_20_dim"
+            android:text="@string/otpDescription"
+            android:textSize="@dimen/scale_15"
+            app:layout_constraintBottom_toTopOf="@+id/otpContainer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <LinearLayout
+            android:id="@+id/otpContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/scale_10_dim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
+            app:layout_constraintVertical_bias="0.100000024">
+
+            <EditText
+                android:id="@+id/OtpCodeOne"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:ems="10"
+                android:textSize="@dimen/scale_25"
+                android:background="@drawable/edit_text_border"
+                android:inputType="number"
+                android:padding="@dimen/scale_16_dim"
+                android:layout_marginStart="@dimen/scale_5_dim"
+                tools:ignore="LabelFor"
+                android:importantForAutofill="no" />
+
+            <EditText
+                android:id="@+id/OtpCodeTwo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:ems="10"
+                android:textSize="@dimen/scale_25"
+                android:background="@drawable/edit_text_border"
+                android:inputType="number"
+                android:padding="@dimen/scale_16_dim"
+                android:layout_marginStart="@dimen/scale_5_dim"
+                tools:ignore="Autofill,LabelFor" />
+
+            <EditText
+                android:id="@+id/OtpCodeThree"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:ems="10"
+                android:textSize="@dimen/scale_25"
+                android:background="@drawable/edit_text_border"
+                android:inputType="number"
+                android:padding="@dimen/scale_16_dim"
+                android:layout_marginStart="@dimen/scale_5_dim"
+                tools:ignore="Autofill,LabelFor" />
+            <EditText
+                android:id="@+id/OtpCodeFour"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:ems="10"
+                android:textSize="@dimen/scale_25"
+                android:background="@drawable/edit_text_border"
+                android:inputType="number"
+                android:padding="@dimen/scale_16_dim"
+                android:layout_marginStart="@dimen/scale_5_dim"
+                tools:ignore="Autofill,LabelFor" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/resendOtpButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:text="@string/resendOtp"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/otpContainer"
+            app:layout_constraintVertical_bias="0.01999998" />
+
+
+        <TextView
+            android:id="@+id/resend_countdown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/otpContainer"
+            app:layout_constraintVertical_bias="0.01999998" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/lgn_btn"
+            style="@style/turnKeyButton.Style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginLeft="@dimen/scale_16_dim"
+            android:layout_marginTop="@dimen/scale_8_dim"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:layout_marginRight="@dimen/scale_16_dim"
+            android:background="@color/colorPrimaryDark"
+            android:onClick="@{() -> viewModel.LoginClick()}"
+            android:filterTouchesWhenObscured="true"
+            android:paddingTop="@dimen/scale_15_dim"
+            android:paddingBottom="@dimen/scale_15_dim"
+            android:text="@string/login"
+            android:textColor="@color/colorlight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/resendOtpButton"
+            app:layout_constraintVertical_bias="0.95" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
