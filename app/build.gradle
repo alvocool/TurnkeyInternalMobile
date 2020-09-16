@@ -25,18 +25,18 @@ android {
     buildTypes {
         android.applicationVariants.all { variant ->
             variant.outputs.all { output ->
-                def appName = "TurnKeyClientApp"
+                def appName = "TurnkeyClientApp"
                 outputFileName = appName + "-${output.baseName}-${variant.versionName}.apk"
             }
         }
         debug {
-            buildConfigField 'String', 'BASE_URL', '"https://sukuti.turnkeyafrica.com/"'
+            buildConfigField 'String', 'BASE_URL', '"https://banca.turnkeyafrica.com/"'
             buildConfigField('String', 'MA_KEY', '"1db9ca31-7c8c-43f6-968a-72e0ac32c801"')
         }
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            buildConfigField 'String', 'BASE_URL', '"https://sukuti.turnkeyafrica.com/"'
+            buildConfigField 'String', 'BASE_URL', '"https://banca.turnkeyafrica.com/"'
             buildConfigField('String', 'MA_KEY', '"1db9ca31-7c8c-43f6-968a-72e0ac32c801"')
         }
     }

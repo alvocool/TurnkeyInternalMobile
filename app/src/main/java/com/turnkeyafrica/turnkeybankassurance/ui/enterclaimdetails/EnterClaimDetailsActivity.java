@@ -229,7 +229,7 @@ public class EnterClaimDetailsActivity extends BaseActivity<ActivityEnterClaimDe
 
             if (photoFile != null) {
                 Uri photoURI = FileProvider.getUriForFile(this,
-                        "com.turnkeyafrica.bankassurance",
+                        "com.turnkeyafrica.turnkeybankassurance",
                         photoFile);
                 takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoURI);
                 startActivityForResult(takePictureIntent, CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);
