@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.vehicleinsurance.extensionsdialog.ExtensionsDialogViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.vehicleinsurance.extensionsdialog.ExtensionsDialogViewModel" />
 
     </data>
 
@@ -43,8 +43,8 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/extensionLimit_InputLayout"
-                    style="@style/turnKeyInput.Style"
-                    android:theme="@style/turnKeyInput.Theme"
+                    style="@style/turnkeyInput.Style"
+                    android:theme="@style/turnkeyInput.Theme"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     app:errorIconDrawable="@null"
@@ -53,6 +53,8 @@
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/extensionLimit"
                         android:inputType="number"
+                        android:longClickable="false"
+                        android:textIsSelectable="false"
                         android:hint="@string/benefit_limit"
                         android:textSize="@dimen/scale_15"
                         android:layout_width="match_parent"
@@ -81,7 +83,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnLater"
-                    style="@style/turnKeyTextButton.Style"
+                    style="@style/turnkeyTextButton.Style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -92,7 +94,7 @@
                     android:filterTouchesWhenObscured="true"/>
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnSubmit"
-                    style="@style/turnKeyTextButton.Style"
+                    style="@style/turnkeyTextButton.Style"
                     android:onClick="@{() -> viewModel.setLimit()}"
                     android:filterTouchesWhenObscured="true"
                     android:text="@string/ok"

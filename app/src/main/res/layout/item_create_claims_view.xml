@@ -5,7 +5,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.createclaim.CreateClaimItemViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.createclaim.CreateClaimItemViewModel" />
 
     </data>
 

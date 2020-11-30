@@ -6,7 +6,7 @@
 
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.insurancequotes.adapter.InsuranceQuotesEmptyItemViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.insurancequotes.adapter.InsuranceQuotesEmptyItemViewModel" />
 
     </data>
 
@@ -41,7 +41,7 @@
 
 
         <com.google.android.material.button.MaterialButton
-            style="@style/turnKeyButton.Style"
+            style="@style/turnkeyButton.Style"
             android:id="@+id/btn_retry"
             android:layout_width="150dp"
             android:layout_height="wrap_content"

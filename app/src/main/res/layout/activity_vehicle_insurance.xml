@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.vehicleinsurance.VehicleInsuranceActivity">
+    tools:context="com.turnkeyafrica.bankassurance.ui.vehicleinsurance.VehicleInsuranceActivity">
 
     <data>
 
@@ -11,7 +11,7 @@
 
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.vehicleinsurance.VehicleInsuranceViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.vehicleinsurance.VehicleInsuranceViewModel" />
 
     </data>
 
@@ -68,8 +68,8 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/vehicle_Type_InputLayout"
-                style="@style/turnKeyInput.Style"
-                android:theme="@style/turnKeyInput.Theme"
+                style="@style/turnkeyInput.Style"
+                android:theme="@style/turnkeyInput.Theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/scale_16_dim"
@@ -78,12 +78,13 @@
                 app:errorTextAppearance="@style/error_appearance">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/vehicle_Type"
+                    android:longClickable="false"
+                    android:textIsSelectable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:onClick="@{() -> viewModel.ShowVehicleModels()}"
                     android:filterTouchesWhenObscured="true"
                     android:drawableEnd="@drawable/graphitedown"
-                    android:drawableRight="@drawable/graphitedown"
                     android:focusableInTouchMode="true"
                     android:focusable="false"
                     android:cursorVisible="false"
@@ -101,8 +102,8 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/vehicleReg_InputLayout"
-                style="@style/turnKeyInput.Style"
-                android:theme="@style/turnKeyInput.Theme"
+                style="@style/turnkeyInput.Style"
+                android:theme="@style/turnkeyInput.Theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/scale_16_dim"
@@ -112,6 +113,8 @@
                 app:errorTextAppearance="@style/error_appearance">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/vehicleReg"
+                    android:longClickable="false"
+android:textIsSelectable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:cursorVisible="true"
@@ -129,8 +132,8 @@
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/vehicleYearManufacture_InputLayout"
-                    style="@style/turnKeyInput.Style"
-                    android:theme="@style/turnKeyInput.Theme"
+                    style="@style/turnkeyInput.Style"
+                    android:theme="@style/turnkeyInput.Theme"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/scale_16_dim"
@@ -139,6 +142,8 @@
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/vehicleYearManufacture"
+                        android:longClickable="false"
+                        android:textIsSelectable="false"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:cursorVisible="true"
@@ -208,8 +213,8 @@
                 app:layout_constraintVertical_bias="0.0" />
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/vehicleValue_InputLayout"
-                style="@style/turnKeyInput.Style"
-                android:theme="@style/turnKeyInput.Theme"
+                style="@style/turnkeyInput.Style"
+                android:theme="@style/turnkeyInput.Theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -221,6 +226,8 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/vehicleValue"
+                    android:longClickable="false"
+android:textIsSelectable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:paddingStart="@dimen/scale_50_dim"
@@ -257,8 +264,8 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/vehicle_insuranceType_InputLayout"
-                style="@style/turnKeyInput.Style"
-                android:theme="@style/turnKeyInput.Theme"
+                style="@style/turnkeyInput.Style"
+                android:theme="@style/turnkeyInput.Theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/scale_16_dim"
@@ -267,6 +274,8 @@
                 app:errorTextAppearance="@style/error_appearance">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/vehicle_insuranceType"
+                    android:longClickable="false"
+android:textIsSelectable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:onClick="@{() -> viewModel.ShowInsuranceTypes()}"
@@ -290,8 +299,8 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/vehicle_dateStart_InputLayout"
-                style="@style/turnKeyInput.Style"
-                android:theme="@style/turnKeyInput.Theme"
+                style="@style/turnkeyInput.Style"
+                android:theme="@style/turnkeyInput.Theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/scale_16_dim"
@@ -300,6 +309,8 @@
                 app:errorTextAppearance="@style/error_appearance">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/vehicle_dateStart"
+                    android:longClickable="false"
+android:textIsSelectable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:onClick="@{() -> viewModel.showDate()}"
@@ -323,8 +334,8 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/vehicle_dateEnd_InputLayout"
-                style="@style/turnKeyInput.Style"
-                android:theme="@style/turnKeyInput.Theme"
+                style="@style/turnkeyInput.Style"
+                android:theme="@style/turnkeyInput.Theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/scale_16_dim"
@@ -333,6 +344,8 @@
                 app:errorTextAppearance="@style/error_appearance">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/vehicle_dateEnd"
+                    android:longClickable="false"
+android:textIsSelectable="false"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:drawableEnd="@drawable/graphitedown"
@@ -366,7 +379,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/getComparison_btn"
-                    style="@style/turnKeyButton.Style"
+                    style="@style/turnkeyButton.Style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="bottom|center"

@@ -19,6 +19,7 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
 -dontwarn okio.**
 -dontwarn com.squareup.okhttp3.**
 -keep class com.squareup.okhttp3.** { *; }
@@ -55,9 +56,14 @@
 
 # keep the specified class members from being removed or renamed
 # only if the class is preserved
--keepclassmembers class com.turnkeyafrica.turnkeybankassurance.data.model.api.InsuranceQuoteResponce$InsuranceQuotation { *; }
--keepclassmembers class com.turnkeyafrica.turnkeybankassurance.data.model.api.PolicyResponce { *; }
-
-
-
-
+-keepclassmembers class com.turnkeyafrica.bankassurance.data.model.api.PolicyResponce { *; }
+-keepclassmembers class com.turnkeyafrica.bankassurance.data.model.api.MpesaCheckStatusWrapper { *; }
+-keepclassmembers class com.turnkeyafrica.bankassurance.data.model.api.QuoteToPolWrapper { *; }
+-keepclassmembers class com.turnkeyafrica.bankassurance.data.model.api.InsuranceQuoteResponce.InsuranceQuotation { *; }
+-keepclassmembers class com.turnkeyafrica.bankassurance.data.model.api.NotificationsRegWrapper { *; }
+-keepclassmembers class com.turnkeyafrica.bankassurance.data.model.api.InsuranceQuoteResponce$InsuranceQuotation { *; }
+-keepclassmembers class com.turnkeyafrica.bankassurance.data.model.api.SimpleOtpRequest { *; }
+-keepclassmembers class com.turnkeyafrica.bankassurance.data.model.api.AnswerVerify { *; }
+-keepclassmembers class com.turnkeyafrica.bankassurance.data.model.api.CredentialsUpdate { *; }
+-keepclassmembers class com.turnkeyafrica.bankassurance.data.model.api.ClientRegistrationRequest { *; }
+-keepclassmembers class com.turnkeyafrica.bankassurance.data.model.api.UserSecurityQuestions { *; }

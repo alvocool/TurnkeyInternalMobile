@@ -130,7 +130,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/uploadEvaluationBtn"
-                        style="@style/turnKeyButton.Style"
+                        style="@style/turnkeyButton.Style"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -176,7 +176,7 @@
                 </LinearLayout>
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/dashPolicyItemBtn"
-                    style="@style/turnKeyTextButton.Style"
+                    style="@style/turnkeyTextButton.Style"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"

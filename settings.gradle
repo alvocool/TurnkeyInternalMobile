@@ -1,1 +1,3 @@
-include ':app', ':AbsaMobileAppSecurity'
+include ':androidsecurity-release'
+include ':app'
+rootProject.name = "Turnkey BankAssurance"

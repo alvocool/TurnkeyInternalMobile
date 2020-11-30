@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.vehicleinsurance.vehicledatedialog.VehiclesDateDialogViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.vehicleinsurance.vehicledatedialog.VehiclesDateDialogViewModel" />
 
     </data>
 

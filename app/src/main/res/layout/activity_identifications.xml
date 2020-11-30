@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout"
-    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.identification.IdentificationsActivity">
+    tools:context="com.turnkeyafrica.bankassurance.ui.identification.IdentificationsActivity">
 
     <data>
 
@@ -11,7 +11,7 @@
 
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.identification.IdentificationsViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.identification.IdentificationsViewModel" />
     </data>
 
     <LinearLayout
@@ -75,8 +75,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/kraPin_InputLayout"
-            style="@style/turnKeyInput.Style"
-            android:theme="@style/turnKeyInput.Theme"
+            style="@style/turnkeyInput.Style"
+            android:theme="@style/turnkeyInput.Theme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -95,6 +95,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/KraPin_Input"
+                android:longClickable="false"
+                android:textIsSelectable="false"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:cursorVisible="true"
@@ -110,8 +112,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/identifications_InputLayout"
-            style="@style/turnKeyInput.Style"
-            android:theme="@style/turnKeyInput.Theme"
+            style="@style/turnkeyInput.Style"
+            android:theme="@style/turnkeyInput.Theme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -126,6 +128,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/identifications_Input"
+                android:longClickable="false"
+                android:textIsSelectable="false"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:cursorVisible="true"
@@ -162,7 +166,7 @@
 
 
         <com.google.android.material.button.MaterialButton
-            style="@style/turnKeyButton.Style"
+            style="@style/turnkeyButton.Style"
             android:id="@+id/Q1_quote_step1btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

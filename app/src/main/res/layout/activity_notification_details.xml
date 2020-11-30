@@ -5,7 +5,7 @@
         <import type="android.view.View" />
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.notificationdetails.NotificationDetailsViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.notificationdetails.NotificationDetailsViewModel" />
     </data>
 
     <LinearLayout

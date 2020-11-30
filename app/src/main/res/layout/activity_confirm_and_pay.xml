@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout2"
-    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.confirmandpay.ConfirmAndPayActivity">
+    tools:context="com.turnkeyafrica.bankassurance.ui.confirmandpay.ConfirmAndPayActivity">
 
     <data>
 
@@ -11,7 +11,7 @@
 
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.confirmandpay.ConfirmAndPayViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.confirmandpay.ConfirmAndPayViewModel" />
 
     </data>
 
@@ -113,7 +113,7 @@
 
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/editPolicy"
-                        style="@style/turnKeyTextButton.Style"
+                        style="@style/turnkeyTextButton.Style"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="end"
@@ -150,7 +150,6 @@
                     android:layout_height="wrap_content"
                     app:buttonTint="@color/colorPrimary"
                     android:enabled="@{viewModel.isLoading ? false : true}"
-                    android:checked="true"
                     android:textSize="@dimen/scale_16"
                     android:visibility="gone" />
 
@@ -168,8 +167,8 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/paymentQ_InputLayout"
-                style="@style/turnKeyInput.Style"
-                android:theme="@style/turnKeyInput.Theme"
+                style="@style/turnkeyInput.Style"
+                android:theme="@style/turnkeyInput.Theme"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/scale_16_dim"
@@ -187,6 +186,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/paymentQ"
                     android:layout_width="match_parent"
+                    android:longClickable="false"
+                    android:textIsSelectable="false"
                     android:layout_height="match_parent"
                     android:layout_gravity="start"
                     android:cursorVisible="false"
@@ -244,7 +245,7 @@
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/payOption1"
-                            style="@style/turnKeyTextButton.Style"
+                            style="@style/turnkeyTextButton.Style"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="start"
@@ -257,7 +258,7 @@
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/payOption2"
-                            style="@style/turnKeyTextButton.Style"
+                            style="@style/turnkeyTextButton.Style"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_gravity="start"
@@ -309,7 +310,7 @@
 
 
             <com.google.android.material.button.MaterialButton
-                style="@style/turnKeyButton.Style"
+                style="@style/turnkeyButton.Style"
                 android:id="@+id/confirmPaymentbtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

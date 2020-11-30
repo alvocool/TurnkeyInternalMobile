@@ -2,13 +2,13 @@
 <layout xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.profile.ProfileActivity">
+    tools:context="com.turnkeyafrica.bankassurance.ui.profile.ProfileActivity">
 
     <data>
 
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.profile.ProfileViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.profile.ProfileViewModel" />
 
     </data>
 
@@ -49,26 +49,6 @@
             android:background="@color/light_gray" />
 
     </com.google.android.material.appbar.AppBarLayout>
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/editProfileNavButton"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginLeft="8dp"
-                android:onClick="@{() -> viewModel.editProfile()}"
-                android:filterTouchesWhenObscured="true"
-                android:padding="@dimen/scale_12_dim"
-                android:text="@string/edit"
-                android:textStyle="bold"
-                android:textSize="@dimen/scale_16"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -115,6 +95,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/customer_edit_first_name"
+                android:longClickable="false"
+                android:textIsSelectable="false"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:cursorVisible="true"
@@ -147,6 +129,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/customer_edit_second_name"
+                android:longClickable="false"
+android:textIsSelectable="false"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:cursorVisible="true"
@@ -179,6 +163,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/customer_edit_mobile_no"
+                android:longClickable="false"
+android:textIsSelectable="false"
                 android:layout_width="match_parent"
                 android:background="@color/white"
                 android:layout_height="match_parent"
@@ -211,6 +197,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/customer_edit_email"
+                android:longClickable="false"
+android:textIsSelectable="false"
                 android:layout_width="match_parent"
                 android:background="@color/white"
                 android:layout_height="match_parent"
@@ -243,6 +231,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/customer_edit_member_since"
+                android:longClickable="false"
+android:textIsSelectable="false"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white"

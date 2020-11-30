@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.turnkeyafrica.bankassurance.ui.accountlocked.AccountLockedActivity">
+
+
+    <data>
+
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.bankassurance.ui.accountlocked.AccountLockedViewModel" />
+    </data>
+
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/x_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/scale_24_dim"
+            android:src="@drawable/ic_x_closed_circle" />
+
+        <TextView
+            android:id="@+id/header"
+            style="@style/TextAppearance.Text.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/your_account_is_locked"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/scale_8_dim"
+            android:textSize="@dimen/scale_18"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/locked_info"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/scale_16_dim"
+            android:layout_marginEnd="@dimen/scale_16_dim"
+            android:textSize="@dimen/scale_14"
+            android:layout_marginBottom="48dp"/>
+
+        <TextView
+            android:id="@+id/infoSupport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/customer_support"
+            android:layout_gravity="center"
+            android:textSize="@dimen/scale_14"
+            android:textAlignment="center" />
+
+        <TextView
+            android:id="@+id/supportContact1"
+            style="@style/TextAppearance.Text.Medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.supportOne}"
+            android:textStyle="bold"
+            android:textColor="@color/colorAccent"
+            android:layout_marginBottom="@dimen/scale_8_dim"
+            android:textSize="@dimen/scale_18"
+            android:layout_gravity="center" />
+
+
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/lgn_btn2"
+        style="@style/turnkeyButton.Style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:filterTouchesWhenObscured="true"
+        android:onClick="@{() -> viewModel.Login()}"
+        android:paddingTop="@dimen/scale_15_dim"
+        android:paddingBottom="@dimen/scale_15_dim"
+        android:text="@string/okay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/body"
+        app:layout_constraintVertical_bias="1.0" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

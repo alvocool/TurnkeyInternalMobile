@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.policy.PolicyItemViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.dashboard.policy.PolicyItemViewModel" />
 
     </data>
 

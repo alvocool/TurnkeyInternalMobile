@@ -4,13 +4,17 @@ android {
     signingConfigs {
         release {
 
+        storeFile file('/Users/turnkey/Documents/PROJECT/BARCLAYS/android/Test')
+            storePassword 'Test12345'
+            keyAlias 'key0'
+            keyPassword 'Test12345'
         }
     }
 
     compileSdkVersion rootProject.ext.compileSdkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
     defaultConfig {
-        applicationId "com.turnkeyafrica.turnkeybankassurance"
+        applicationId "com.turnkeyafrica.bankassurance"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
 
@@ -25,18 +29,19 @@ android {
     buildTypes {
         android.applicationVariants.all { variant ->
             variant.outputs.all { output ->
-                def appName = "TurnkeyClientApp"
+                def appName = "TurnkeyBankAssurance"
                 outputFileName = appName + "-${output.baseName}-${variant.versionName}.apk"
             }
         }
         debug {
-            buildConfigField 'String', 'BASE_URL', '"https://banca.turnkeyafrica.com/"'
+            buildConfigField 'String', 'BASE_URL', '"https://vilingi.turnkeyafrica.com/"'
             buildConfigField('String', 'MA_KEY', '"1db9ca31-7c8c-43f6-968a-72e0ac32c801"')
         }
+
         release {
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            buildConfigField 'String', 'BASE_URL', '"https://banca.turnkeyafrica.com/"'
+            buildConfigField 'String', 'BASE_URL', '"https://vilingi.turnkeyafrica.com/"'
             buildConfigField('String', 'MA_KEY', '"1db9ca31-7c8c-43f6-968a-72e0ac32c801"')
         }
     }
@@ -60,6 +65,7 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$rootProject.supportLibraryVersion"
     implementation "androidx.recyclerview:recyclerview:$rootProject.recyclerViewVersion"
     implementation "androidx.cardview:cardview:$rootProject.cardViewVersion"
+    implementation "androidx.security:security-crypto:$rootProject.crypto"
     implementation "com.google.android.material:material:$rootProject.materialVersion"
     implementation "androidx.vectordrawable:vectordrawable:$rootProject.vectorDrawableVersion"
     implementation "androidx.vectordrawable:vectordrawable-animated:$rootProject.animatedVectorDrawableVersion"
@@ -74,6 +80,8 @@ dependencies {
     implementation "org.apache.commons:commons-lang3:$rootProject.commonsLang3"
     implementation "com.github.stfalcon:smsverifycatcher:$rootProject.smsverifycatcher"
     implementation "com.google.dagger:dagger:$rootProject.dagger2Version"
+    implementation 'androidx.navigation:navigation-fragment:2.2.2'
+    implementation 'androidx.navigation:navigation-ui:2.2.2'
     annotationProcessor "com.google.dagger:dagger-compiler:$rootProject.dagger2Version"
     annotationProcessor "com.google.dagger:dagger-android-processor:$rootProject.dagger2Version"
     implementation "com.google.dagger:dagger-android-support:$rootProject.dagger2Version"
@@ -93,29 +101,28 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-extensions:$rootProject.lifecycleVersion"
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$rootProject.lifecycleVersion"
 
-
+    implementation project(path: ':androidsecurity-release')
     debugImplementation "com.amitshekhar.android:debug-db:$rootProject.debugDBVersion"
-    implementation project(path: ':AbsaMobileAppSecurity')
 }
 
 configurations.all {
     resolutionStrategy.force 'com.google.code.findbugs:jsr305:1.3.9'
-}	
+}
 
 private Integer generateVersionCode() {
-	return rootProject.ext.minSdkVersion * 10000000 + rootProject.ext.versionMajor * 10000 + rootProject.ext.versionMinor * 100 + rootProject.ext.versionPatch
+    return rootProject.ext.minSdkVersion * 10000000 + rootProject.ext.versionMajor * 10000 + rootProject.ext.versionMinor * 100 + rootProject.ext.versionPatch
 }
 
 private String generateVersionName() {
-	String versionName = "${rootProject.ext.versionMajor}.${rootProject.ext.versionMinor}.${rootProject.ext.versionPatch}"
-	if (rootProject.ext.versionClassifier == null && rootProject.ext.isSnapshot) {
-		rootProject.ext.versionClassifier = "BETA"
-	}
+    String versionName = "${rootProject.ext.versionMajor}.${rootProject.ext.versionMinor}.${rootProject.ext.versionPatch}"
+    if (rootProject.ext.versionClassifier == null && rootProject.ext.isSnapshot) {
+        rootProject.ext.versionClassifier = "BETA"
+    }
 
-	if (rootProject.ext.versionClassifier != null) {
-		versionName += "-" + rootProject.ext.versionClassifier
-	}
-	return versionName
+    if (rootProject.ext.versionClassifier != null) {
+        versionName += "-" + rootProject.ext.versionClassifier
+    }
+    return versionName
 }
 
 apply plugin: 'com.google.gms.google-services'

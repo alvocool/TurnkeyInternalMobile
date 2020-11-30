@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.certificatepickup.branchregionsdialog.BranchRegionDialogViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.certificatepickup.branchregionsdialog.BranchRegionDialogViewModel" />
 
     </data>
 

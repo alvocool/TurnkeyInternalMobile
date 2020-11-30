@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.otp.OtpActivity">
+    tools:context="com.turnkeyafrica.bankassurance.ui.otp.OtpActivity">
 
     <data>
 
@@ -10,7 +10,7 @@
 
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.otp.OtpViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.otp.OtpViewModel" />
 
     </data>
 
@@ -84,6 +84,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:longClickable="false"
+                android:textIsSelectable="false"
                 android:textAlignment="center"
                 android:ems="10"
                 android:textSize="@dimen/scale_25"
@@ -102,6 +104,8 @@
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:ems="10"
+                android:longClickable="false"
+                android:textIsSelectable="false"
                 android:textSize="@dimen/scale_25"
                 android:background="@drawable/edit_text_border"
                 android:inputType="number"
@@ -118,6 +122,8 @@
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:ems="10"
+                android:longClickable="false"
+                android:textIsSelectable="false"
                 android:textSize="@dimen/scale_25"
                 android:background="@drawable/edit_text_border"
                 android:inputType="number"
@@ -133,6 +139,8 @@
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:ems="10"
+                android:longClickable="false"
+                android:textIsSelectable="false"
                 android:textSize="@dimen/scale_25"
                 android:background="@drawable/edit_text_border"
                 android:inputType="number"
@@ -175,7 +183,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/lgn_btn"
-            style="@style/turnKeyButton.Style"
+            style="@style/turnkeyButton.Style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/scale_16_dim"

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.turnkeyafrica.turnkeybankassurance">
+    package="com.turnkeyafrica.bankassurance">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
@@ -14,335 +14,385 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".BankAssuranceApp"
-        android:allowBackup="false"
-        android:icon="@drawable/icon"
+        android:name="com.turnkeyafrica.bankassurance.TurnkeyBankAssuranceApp"
+        android:icon="@drawable/kenlogo"
         android:label="@string/app_name"
         android:networkSecurityConfig="@xml/network_security_config"
-        android:roundIcon="@drawable/icon"
+        android:roundIcon="@drawable/kenlogo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="LockedOrientationActivity"
-        tools:replace="android:allowBackup"
         tools:targetApi="n">
-        <activity android:name="com.turnkeyafrica.turnkeybankassurance.ui.notificationdetails.NotificationDetailsActivity"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.inbox.InboxActivity"
+        <activity android:name="com.turnkeyafrica.bankassurance.ui.accountlocked.AccountLockedActivity"></activity>
+        <activity
+            android:name="com.turnkeyafrica.bankassurance.ui.entersecurityquestions.EnterSecurityQuestionsActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.turnkeyafrica.bankassurance.ui.successstep.SuccessStepActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.turnkeyafrica.bankassurance.ui.securityquestion.SecurityQuestionActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.turnkeyafrica.bankassurance.ui.resetpassword.ResetPasswordActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.turnkeyafrica.bankassurance.ui.forgotpassword.ForgotPasswordActivity"
+            android:label="@string/title_activity_forgot_password"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.turnkeyafrica.bankassurance.ui.notificationdetails.NotificationDetailsActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.inbox.InboxActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.inbox.InboxActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.inbox.InboxActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.capturedamageimages.CaptureDamageImagesActivity"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.enterclaimdetails.EnterClaimDetailsActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.capturedamageimages.CaptureDamageImagesActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.enterclaimdetails.EnterClaimDetailsActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.enterclaimdetails.EnterClaimDetailsActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.enterclaimdetails.EnterClaimDetailsActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.enterrequestdetails.EnterServiceRequestDetailsActivity"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.newrequest.NewRequestQuestionActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.enterrequestdetails.EnterServiceRequestDetailsActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.newrequest.NewRequestQuestionActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.newrequest.NewRequestQuestionActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.newrequest.NewRequestQuestionActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.newrequest.NewRequestQuestionActivity"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.servicerequests.ServiceRequestActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.newrequest.NewRequestQuestionActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.servicerequests.ServiceRequestActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.servicerequests.ServiceRequestActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.servicerequests.ServiceRequestActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.servicerequestdetails.ServiceRequestDetailsActivity"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.servicerequests.ServiceRequestActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.servicerequestdetails.ServiceRequestDetailsActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.servicerequests.ServiceRequestActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.servicerequests.ServiceRequestActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.servicerequests.ServiceRequestActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.enterclaimdetails.EnterClaimDetailsActivity"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.createrequest.CreateRequestActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.enterclaimdetails.EnterClaimDetailsActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.createrequest.CreateRequestActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.createrequest.CreateRequestActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.createrequest.CreateRequestActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.inbox.InboxActivity"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.inbox.InboxActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.servicerequests.ServiceRequestActivity"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.servicerequests.ServiceRequestActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.confirmclaimdetails.ConfirmClaimDetailsActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.confirmclaimdetails.ConfirmClaimDetailsActivity"
             android:label="@string/title_activity_confirm_claim_details"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.claimdetails.ClaimDetailsActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.claimdetails.ClaimDetailsActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.claimdetails.ClaimDetailsActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.claimdetails.ClaimDetailsActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.claimdetails.ClaimDetailsActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.claimdetails.ClaimDetailsActivity"
             android:label="@string/title_activity_claim_details"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.createclaim.CreateClaimActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.createclaim.CreateClaimActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.createclaim.CreateClaimActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.createclaim.CreateClaimActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.createclaim.CreateClaimActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.createclaim.CreateClaimActivity"
             android:label="@string/title_activity_create_claim"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.createrequest.CreateRequestActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.createrequest.CreateRequestActivity"
             android:label="@string/title_activity_create_claim"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.servicerequests.ServiceRequestActivity"
+            android:launchMode="singleTop"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.servicerequests.ServiceRequestActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.servicerequests.ServiceRequestActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.servicerequests.ServiceRequestActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.branchdetails.BranchDetailsActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.branchdetails.BranchDetailsActivity"
             android:label="@string/title_activity_branch_details"
             android:launchMode="singleTop"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.certificatepickup.CertificatePickUpActivity"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.certificatepickup.CertificatePickUpActivity"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.certificatepickup.CertificatePickUpActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.certificatepickup.CertificatePickUpActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.certificatepickup.CertificatePickUpActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.certificatepickup.CertificatePickUpActivity"
             android:label="@string/title_activity_certificate_pick_up"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.cardpayment.CardPaymentActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.cardpayment.CardPaymentActivity"
             android:label="@string/title_activity_card_payment"
             android:launchMode="singleTop"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.confirmandpay.ConfirmAndPayActivity"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.confirmandpay.ConfirmAndPayActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.confirmandpay.ConfirmAndPayActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.confirmandpay.ConfirmAndPayActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.editprofile.EditProfileActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.editprofile.EditProfileActivity"
             android:label="@string/title_activity_edit_profile"
             android:launchMode="singleTop"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.profile.ProfileActivity"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.profile.ProfileActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.profile.ProfileActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.profile.ProfileActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.profile.ProfileActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.profile.ProfileActivity"
             android:label="@string/title_activity_profile"
             android:launchMode="singleTop"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.vehiclevaluation.VehicleValuationActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.vehiclevaluation.VehicleValuationActivity"
             android:label="@string/title_activity_vehicle_valuation"
             android:launchMode="singleTop"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.valuatordetails.ValuatorDetailsActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.valuatordetails.ValuatorDetailsActivity"
             android:label="@string/title_activity_valuer_details"
             android:launchMode="singleTop"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.findvaluer.FindValuerActivity"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.findvaluer.FindValuerActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.findvaluer.FindValuerActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.findvaluer.FindValuerActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.findvaluer.FindValuerActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.findvaluer.FindValuerActivity"
             android:label="@string/title_activity_find_valuer"
             android:launchMode="singleTop"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.policydetails.PolicyDetailsActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.policydetails.PolicyDetailsActivity"
             android:label="@string/title_activity_policy_details"
             android:launchMode="singleTop"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.insuranceproducts.InsuranceProductsActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.insuranceproducts.InsuranceProductsActivity"
             android:label="@string/title_activity_insurance_products"
             android:launchMode="singleTop"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.paymentsuccessful.PaymentSuccessfulActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.paymentsuccessful.PaymentSuccessfulActivity"
             android:label="@string/title_activity_payment_successful"
             android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.pay.PayActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.pay.PayActivity"
             android:label="@string/title_activity_pay"
             android:launchMode="singleTop"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.confirmandpay.ConfirmAndPayActivity"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.confirmandpay.ConfirmAndPayActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.confirmandpay.ConfirmAndPayActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.confirmandpay.ConfirmAndPayActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.confirmandpay.ConfirmAndPayActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.confirmandpay.ConfirmAndPayActivity"
             android:label="@string/title_activity_confirm_and_pay"
             android:launchMode="singleTop"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.identification.IdentificationsActivity"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.identification.IdentificationsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.identification.IdentificationsActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.identification.IdentificationsActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.identification.IdentificationsActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.identification.IdentificationsActivity"
             android:label="@string/title_activity_identifications"
             android:launchMode="singleTop"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.proofofownership.ProofOfOwnerShipActivity"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.proofofownership.ProofOfOwnerShipActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.proofofownership.ProofOfOwnerShipActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.proofofownership.ProofOfOwnerShipActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.insurancequotes.InsuranceQuotesActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.insurancequotes.InsuranceQuotesActivity"
             android:label="@string/title_activity_insurance_quotes"
             android:launchMode="singleTop"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.vehicleinsurance.VehicleInsuranceActivity"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.vehicleinsurance.VehicleInsuranceActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.vehicleinsurance.VehicleInsuranceActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.vehicleinsurance.VehicleInsuranceActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.proofofownership.ProofOfOwnerShipActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.proofofownership.ProofOfOwnerShipActivity"
             android:label="@string/title_activity_proof_of_owner_ship"
             android:launchMode="singleTop"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.qoutedetails.QuoteDetailsActivity"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.qoutedetails.QuoteDetailsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.qoutedetails.QuoteDetailsActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.qoutedetails.QuoteDetailsActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.contactus.ContactUsActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.contactus.ContactUsActivity"
             android:label="@string/title_activity_contact_us"
             android:launchMode="singleTop"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.qoutedetails.QuoteDetailsActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.qoutedetails.QuoteDetailsActivity"
             android:label="@string/title_activity_quote_details"
             android:launchMode="singleTop"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.vehicleinsurance.VehicleInsuranceActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.vehicleinsurance.VehicleInsuranceActivity"
             android:label="@string/title_activity_vehicle_insurance"
             android:launchMode="singleTop"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.otp.OtpActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.otp.OtpActivity"
             android:label="@string/title_activity_otp"
             android:launchMode="singleTop"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.login.LoginActivity"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.login.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.login.LoginActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.login.LoginActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.register.RegisterActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.register.RegisterActivity"
             android:label="@string/title_activity_register"
             android:launchMode="singleTop"
-            android:parentActivityName="com.turnkeyafrica.turnkeybankassurance.ui.login.LoginActivity"
+            android:parentActivityName="com.turnkeyafrica.bankassurance.ui.login.LoginActivity"
             android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.turnkeyafrica.turnkeybankassurance.ui.login.LoginActivity" />
+                android:value="com.turnkeyafrica.bankassurance.ui.login.LoginActivity" />
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.splash.SplashActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.splash.SplashActivity"
             android:launchMode="singleTop"
             android:noHistory="true"
             android:screenOrientation="portrait">
@@ -353,17 +403,17 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.login.LoginActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.login.LoginActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity"
+            android:name="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity"
             android:launchMode="singleTop"
             android:screenOrientation="portrait" />
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.turnkeyafrica.turnkeybankassurance"
+            android:authorities="com.turnkeyafrica.bankassurance"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
@@ -372,7 +422,7 @@
         </provider>
 
         <service
-            android:name="com.turnkeyafrica.turnkeybankassurance.service.BankAssuranceMessaging"
+            android:name="com.turnkeyafrica.bankassurance.service.BankAssuranceMessaging"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />

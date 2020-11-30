@@ -23,19 +23,26 @@
         <item name="android:textSize">12sp</item>
     </style>
 
-    <style name="turnKeyButton.Style" parent="Widget.MaterialComponents.Button">
+    <style name="turnkeyButton.Style" parent="Widget.MaterialComponents.Button">
         <item name="backgroundTint">@color/colorPrimaryLight</item>
         <item name="android:textColor">@color/colorlight</item>
         <item name="android:background">@color/colorPrimaryLight</item>
     </style>
 
-    <style name="turnKeyOutlineButton.Style" parent="Widget.MaterialComponents.Button.OutlinedButton">
+    <style name="turnkeyButton.SuccessStyle" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/colorlight</item>
+        <item name="android:textColor">@color/colorPrimaryLight</item>
+        <item name="android:background">@color/colorlight</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="turnkeyOutlineButton.Style" parent="Widget.MaterialComponents.Button.OutlinedButton">
         <item name="android:textColor" >@drawable/outline_button_disable_color</item>
         <item name="android:textAppearance">@style/TextAppearance.Text.Medium</item>
         <item name="strokeColor">@color/colorPrimaryLight</item>
     </style>
 
-    <style name="turnKeyTextButton.Style" parent="Widget.MaterialComponents.Button.TextButton">
+    <style name="turnkeyTextButton.Style" parent="Widget.MaterialComponents.Button.TextButton">
             <item name="android:textColor">@color/colorPrimaryLight</item>
         </style>
 
@@ -70,11 +77,11 @@
         <item name="colorAccent">@color/colorPrimary</item>
     </style>
 
-    <style name="turnKeyInput.Theme" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <style name="turnkeyInput.Theme" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="colorControlActivated">@color/colorPrimary</item>
     </style>
 
-    <style name="turnKeyInput.Style" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+    <style name="turnkeyInput.Style" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="errorIconDrawable">@null</item>
     </style>
 

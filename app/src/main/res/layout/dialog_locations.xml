@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.findvaluer.locationsdialog.LocationsDialogViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.findvaluer.locationsdialog.LocationsDialogViewModel" />
 
     </data>
 

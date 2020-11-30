@@ -2,14 +2,14 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.qoutedetails.QuoteDetailsActivity">
+    tools:context="com.turnkeyafrica.bankassurance.ui.qoutedetails.QuoteDetailsActivity">
 
     <data>
 
         <import type="android.view.View" />
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.qoutedetails.QuoteDetailsViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.qoutedetails.QuoteDetailsViewModel" />
     </data>
 
     <LinearLayout
@@ -131,7 +131,7 @@
 
                             <com.google.android.material.button.MaterialButton
                                 android:id="@+id/saveQuote_btn"
-                                style="@style/turnKeyOutlineButton.Style"
+                                style="@style/turnkeyOutlineButton.Style"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="8dp"
@@ -151,7 +151,7 @@
 
                             <com.google.android.material.button.MaterialButton
                                 android:id="@+id/buyInsurance_btn"
-                                style="@style/turnKeyButton.Style"
+                                style="@style/turnkeyButton.Style"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"

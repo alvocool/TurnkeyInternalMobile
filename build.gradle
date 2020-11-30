@@ -1,12 +1,13 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 
 buildscript {
     repositories {
         google()
         jcenter()
-        
+
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:4.0.1'
+        classpath 'com.android.tools.build:gradle:4.0.0'
         classpath 'com.google.gms:google-services:4.3.3'
     }
 }
@@ -16,7 +17,7 @@ allprojects {
         google()
         maven { url 'https://maven.google.com' }
         jcenter()
-        
+
     }
 }
 
@@ -28,13 +29,13 @@ ext {
     versionName = "1.0" //default version name
     versionCode = 1 //local build version code
 
-	versionMajor = 1
-	versionMinor = 0
-	versionPatch = 0
-	versionClassifier = null
-	isSnapshot = true
+    versionMajor = 1
+    versionMinor = 0
+    versionPatch = 0
+    versionClassifier = null
+    isSnapshot = true
 
-    minSdkVersion = 16
+    minSdkVersion = 21
     targetSdkVersion = 28
     compileSdkVersion = 28
     buildToolsVersion = '28.0.3'
@@ -52,7 +53,7 @@ ext {
     calligraphyVersion = '2.2.0'
     glideVersion = '4.11.0'
     rx2FastAndroidNetworking = '1.0.1'
-    commonsLang3 = '3.10'
+    commonsLang3 = '3.9'
     appCenterSdkVersion = '2.0.0'
     dagger2Version = '2.27'
     rxjava2Version = '2.2.9'
@@ -62,6 +63,8 @@ ext {
     lifecycleVersion = '2.2.0'
 
     firebase = '20.2.1'
+
+    crypto = '1.1.0-alpha02'
 
     siliCompressor = '2.2.2'
 

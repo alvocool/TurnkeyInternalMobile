@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.confirmclaimdetails.ConfirmClaimDetailsActivity">
+    tools:context="com.turnkeyafrica.bankassurance.ui.confirmclaimdetails.ConfirmClaimDetailsActivity">
 
     <data>
 
@@ -10,7 +10,7 @@
 
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.confirmclaimdetails.ConfirmClaimDetailsViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.confirmclaimdetails.ConfirmClaimDetailsViewModel" />
 
     </data>
 
@@ -86,15 +86,7 @@
                 android:textSize="16sp"
                 android:textStyle="bold"/>
 
-            <TextView
-                android:id="@+id/coverType"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginLeft="16dp"
-                android:text="@{viewModel.coverType}"
-                android:textColor="@color/text_black"
-                android:textSize="14sp" />
+
 
 
 
@@ -262,7 +254,7 @@
         </LinearLayout>
         <com.google.android.material.button.MaterialButton
             android:id="@+id/register_btn"
-            style="@style/turnKeyButton.Style"
+            style="@style/turnkeyButton.Style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/scale_16_dim"

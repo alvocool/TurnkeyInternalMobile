@@ -2,14 +2,14 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardActivity">
+    tools:context="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardActivity">
 
     <data>
 
         <import type="android.view.View" />
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.DashboardViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.dashboard.DashboardViewModel" />
     </data>
 
     <FrameLayout

@@ -2,14 +2,14 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.valuatordetails.ValuatorDetailsActivity">
+    tools:context="com.turnkeyafrica.bankassurance.ui.valuatordetails.ValuatorDetailsActivity">
 
     <data>
 
         <import type="android.view.View" />
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.valuatordetails.ValuatorDetailsViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.valuatordetails.ValuatorDetailsViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -115,7 +115,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/materialButton2"
-            style="@style/turnKeyButton.Style"
+            style="@style/turnkeyButton.Style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"

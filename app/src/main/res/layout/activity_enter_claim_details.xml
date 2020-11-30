@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.enterclaimdetails.EnterClaimDetailsActivity">
+    tools:context="com.turnkeyafrica.bankassurance.ui.enterclaimdetails.EnterClaimDetailsActivity">
 
     <data>
 
@@ -10,7 +10,7 @@
 
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.enterclaimdetails.EnterClaimDetailsViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.enterclaimdetails.EnterClaimDetailsViewModel" />
 
     </data>
 
@@ -76,7 +76,7 @@
 
                             <com.google.android.material.textfield.TextInputLayout
                                 android:id="@+id/claimShortDescInputLayout"
-                                style="@style/turnKeyInput.Style"
+                                style="@style/turnkeyInput.Style"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="16dp"
@@ -84,7 +84,7 @@
                                 android:layout_marginTop="24dp"
                                 android:layout_marginEnd="16dp"
                                 android:layout_marginRight="16dp"
-                                android:theme="@style/turnKeyInput.Theme"
+                                android:theme="@style/turnkeyInput.Theme"
                                 app:errorIconDrawable="@null"
                                 app:errorTextAppearance="@style/error_appearance"
                                 app:layout_constraintEnd_toEndOf="parent"
@@ -93,6 +93,8 @@
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/claimShortDesc"
+                                    android:longClickable="false"
+                                    android:textIsSelectable="false"
                                     android:layout_width="match_parent"
                                     android:layout_height="144dp"
                                     android:cursorVisible="true"
@@ -110,18 +112,20 @@
 
                             <com.google.android.material.textfield.TextInputLayout
                                 android:id="@+id/incidentDate_InputLayout"
-                                style="@style/turnKeyInput.Style"
+                                style="@style/turnkeyInput.Style"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="@dimen/scale_16_dim"
                                 android:layout_marginTop="@dimen/scale_24_dim"
                                 android:layout_marginEnd="@dimen/scale_16_dim"
                                 android:layout_marginBottom="@dimen/scale_24_dim"
-                                android:theme="@style/turnKeyInput.Theme"
+                                android:theme="@style/turnkeyInput.Theme"
                                 app:errorTextAppearance="@style/error_appearance">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/incidentDate"
+                                    android:longClickable="false"
+android:textIsSelectable="false"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_gravity="start"
@@ -144,17 +148,19 @@
 
                             <com.google.android.material.textfield.TextInputLayout
                                 android:id="@+id/propertyId_InputLayout"
-                                style="@style/turnKeyInput.Style"
+                                style="@style/turnkeyInput.Style"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="@dimen/scale_16_dim"
                                 android:layout_marginEnd="@dimen/scale_16_dim"
                                 android:layout_marginBottom="@dimen/scale_24_dim"
-                                android:theme="@style/turnKeyInput.Theme"
+                                android:theme="@style/turnkeyInput.Theme"
                                 app:errorTextAppearance="@style/error_appearance">
 
                                 <com.google.android.material.textfield.TextInputEditText
                                     android:id="@+id/propertyId"
+                                    android:longClickable="false"
+android:textIsSelectable="false"
                                     android:layout_width="match_parent"
                                     android:layout_height="match_parent"
                                     android:layout_gravity="start"
@@ -290,7 +296,7 @@
 
                         <com.google.android.material.button.MaterialButton
                             android:id="@+id/register_btn"
-                            style="@style/turnKeyButton.Style"
+                            style="@style/turnkeyButton.Style"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="@dimen/scale_16_dim"

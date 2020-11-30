@@ -3,14 +3,14 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.payments.PaymentsActivity">
+    tools:context="com.turnkeyafrica.bankassurance.ui.payments.PaymentsActivity">
 
     <data>
         <import type="android.view.View" />
 
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.pay.PayViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.pay.PayViewModel" />
 
     </data>
 
@@ -137,7 +137,7 @@
 
                 <com.google.android.material.button.MaterialButton
                     android:id="@+id/done_pay"
-                    style="@style/turnKeyButton.Style"
+                    style="@style/turnkeyButton.Style"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"

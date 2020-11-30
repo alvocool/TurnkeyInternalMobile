@@ -3,7 +3,7 @@
 
     ////mine
 
-    <string name="app_name">Turnkey BankAssurance</string>
+    <string name="app_name">TurnQuest Digital</string>
 
     <string name="login">Login</string>
     <string name="email">Email</string>
@@ -13,7 +13,7 @@
 
     <string name="sessionExpired">Session Expired. Login to continue</string>
     <!--CopyRight-->
-    <string name="copyright">©2020 Turnkey Group. All rights reserved.</string>
+    <string name="copyright">©2020 KenIndia Group. All rights reserved.</string>
 
 
     <!--SplashScreen-->
@@ -51,8 +51,8 @@
     <string name="renewalDateHeader">Renewal date - </string>
     <string name="expiredDateHeader">Expires on</string>
     <!--Login Screen String List-->
-    <string name="login_description">Welcome</string>
-    <string name="login_description2">Enter your mobile number below to log in.</string>
+    <string name="login_description">Enter your mobile number and password to log in.</string>
+    <string name="login_description2">An OTP will be sent to this number.</string>
     <string name="login_description3">We will send a one time pin to your number</string>
     <string name="reg_details">Not yet registered?</string>
     <string name="reg_btn">Register Here</string>
@@ -455,4 +455,62 @@ Tempus iaculis urna id volutpat. Blandit aliquam etiam erat velit. Arcu vitae el
     <string name="error_mpesa_code">Enter mpesa code</string>
     <string name="error_mpesa_agent_code">Mpesa payment is not available for this agent.</string>
     <string name="mpesa_number_hint">Hint: Enter the number you used to pay with.</string>
+    <string name="customer_password_hint">Enter your password</string>
+    <string name="customer_password">Password</string>
+    <string name="error_password">Enter you password</string>
+    <string name="customer_confirm_password">Confirm Password</string>
+    <string name="error_confirm_password">Confirm your password to continue.</string>
+    <string name="error_password_mismatch">Password do not match. Kindly retry.</string>
+    <string name="error_password_strength">Ensure password is at least 8 characters long and has at least one upper-case, lower-case, digit and special character.</string>
+    <string name="payValueError">Kindly select a payment option to proceed.</string>
+    <string name="kenya">Kenya</string>
+    <string name="forgotPassword">Forgot your password?</string>
+    <string name="title_activity_forgot_password">Forgot password</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="you_ve_successfully">You\'ve successfully</string>
+    <string name="registered">Registered</string>
+    <string name="continue_to_login">Continue to login</string>
+    <string name="tick">Tick</string>
+    <string name="reset_your_password">Reset your password</string>
+    <string name="createPasswordTitle">Create a password</string>
+    <string name="securityQuestion">Security question</string>
+    <string name="forgotPasswordTitle">Forgot password</string>
+    <string name="bar">Bar</string>
+    <string name="step_1_of_3">Step 1 of 3</string>
+    <string name="please_enter_your_mobile_number">Please enter your mobile number.</string>
+    <string name="step_3_of_3">Step 3 of 3</string>
+    <string name="resetHelper">Your password must contain at least <b>8 characters,
+        1 capital letter, 1 number and one symbol.</b></string>
+    <string name="resetPassword">Reset password</string>
+    <string name="verify">Verify</string>
+    <string name="securityQuestionDescription">Please enter the answer of your security question below.</string>
+    <string name="forgot_your_security_question">Forgot your security question?</string>
+    <string name="step_2_of_3">Step 2 of 3</string>
+    <string name="securityQuestionQ1">Select your preferred security questions:</string>
+    <string name="register">Register</string>
+    <string name="successful">Successful</string>
+    <string name="passwordReset">Password reset</string>
+    <string name="question1">Question 1</string>
+    <string name="answer">Answer</string>
+    <string name="question2">Question 2</string>
+    <string name="question3">Question 3</string>
+    <string name="dash">Dash</string>
+    <string name="questionExistsError">Question already exists.</string>
+    <string name="required">Field is required.</string>
+    <string name="turnkeybankassurance">KenIndia  Insurance</string>
+    <string name="error_invalid_mobile">Invalid Mobile Number.</string>
+    <string name="errorSecurityQuestion">Enter the answer to the question.</string>
+    <string name="okay">Okay</string>
+    <string name="your_account_is_locked">Your account is locked</string>
+    <string name="locked_info">Your account has been temporarily locked due to multiple incorrect login attempts. Please call customer support to unlock your account.</string>
+    <string name="customer_support">Customer support:</string>
+    <string name="turnquest">TurnQuest</string>
+    <string name="digital">Digital</string>
 </resources>

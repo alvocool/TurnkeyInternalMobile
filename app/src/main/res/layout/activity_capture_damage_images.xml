@@ -4,7 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.capturedamageimages.CaptureDamageImagesActivity">
+    tools:context="com.turnkeyafrica.bankassurance.ui.capturedamageimages.CaptureDamageImagesActivity">
 
 
     <data>
@@ -12,7 +12,7 @@
         <import type="android.view.View" />
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.capturedamageimages.CaptureDamageImagesViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.capturedamageimages.CaptureDamageImagesViewModel" />
 
     </data>
 
@@ -239,7 +239,7 @@
             </LinearLayout>
 
                 <com.google.android.material.button.MaterialButton
-                    style="@style/turnKeyButton.Style"
+                    style="@style/turnkeyButton.Style"
                     android:id="@+id/Continue"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

@@ -8,7 +8,7 @@
 
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.dashboard.claims.ClaimsViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.dashboard.claims.ClaimsViewModel" />
 
     </data>
 

@@ -45,4 +45,6 @@
     <dimen name="scale_250_dim">250dp</dimen>
     <dimen name="scale_400_dim">400dp</dimen>
     <dimen name="scale_32_dim">32dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="scale_28">28sp</dimen>
 </resources>

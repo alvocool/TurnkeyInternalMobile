@@ -4,17 +4,17 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.turnkeyafrica.turnkeybankassurance",
+  "applicationId": "com.turnkeyafrica.bankassurance",
   "variantName": "release",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "properties": [],
-      "versionCode": 160010000,
-      "versionName": "160010000",
+      "versionCode": 210010000,
+      "versionName": "210010000",
       "enabled": true,
-      "outputFile": "TurnKeyClientApp-release-1.0.0-BETA.apk"
+      "outputFile": "TurnkeyBankAssurance-release-1.0.0-BETA.apk"
     }
   ]
 }

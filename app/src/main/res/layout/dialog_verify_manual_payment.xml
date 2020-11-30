@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.pay.manualpayment.DialogVerifyManualPaymentViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.pay.manualpayment.DialogVerifyManualPaymentViewModel" />
 
     </data>
     <androidx.cardview.widget.CardView
@@ -33,7 +33,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/mpesaCodeInputLayout"
-        style="@style/turnKeyInput.Style"
+        style="@style/turnkeyInput.Style"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/scale_16_dim"
@@ -41,13 +41,15 @@
         android:layout_marginLeft="@dimen/scale_16_dim"
         android:layout_marginEnd="@dimen/scale_16_dim"
         android:layout_marginRight="@dimen/scale_16_dim"
-        android:theme="@style/turnKeyInput.Theme"
+        android:theme="@style/turnkeyInput.Theme"
         app:errorIconDrawable="@null"
         app:errorTextAppearance="@style/error_appearance"
         app:helperText="@string/mpesaManualCode">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/mpesaCode"
+            android:longClickable="false"
+            android:textIsSelectable="false"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:cursorVisible="true"
@@ -63,7 +65,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/mpesaNumberInputLayout"
-                style="@style/turnKeyInput.Style"
+                style="@style/turnkeyInput.Style"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/scale_16_dim"
@@ -71,13 +73,15 @@
                 android:layout_marginLeft="@dimen/scale_16_dim"
                 android:layout_marginEnd="@dimen/scale_16_dim"
                 android:layout_marginRight="@dimen/scale_16_dim"
-                android:theme="@style/turnKeyInput.Theme"
+                android:theme="@style/turnkeyInput.Theme"
                 app:errorIconDrawable="@null"
                 app:errorTextAppearance="@style/error_appearance"
                 app:helperText="@string/mpesa_number_hint">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/mpesaNumber"
+                    android:longClickable="false"
+                    android:textIsSelectable="false"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:cursorVisible="true"

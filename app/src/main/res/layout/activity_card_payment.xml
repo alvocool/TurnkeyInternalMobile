@@ -2,14 +2,14 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.turnkeyafrica.turnkeybankassurance.ui.cardpayment.CardPaymentActivity">
+    tools:context="com.turnkeyafrica.bankassurance.ui.cardpayment.CardPaymentActivity">
 
     <data>
 
         <import type="android.view.View" />
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.cardpayment.CardPaymentViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.cardpayment.CardPaymentViewModel" />
 
     </data>
 
@@ -82,10 +82,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
-            android:layout_marginRight="24dp"
             android:layout_marginBottom="481dp"
             android:text="@{viewModel.amountDetails}"
             android:textSize="@dimen/scale_20"
@@ -99,8 +97,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/creditCardName_TextInputLayout"
-            style="@style/turnKeyInput.Style"
-            android:theme="@style/turnKeyInput.Theme"
+            style="@style/turnkeyInput.Style"
+            android:theme="@style/turnkeyInput.Theme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -119,6 +117,8 @@
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/creditCardName"
+                android:longClickable="false"
+android:textIsSelectable="false"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:cursorVisible="true"
@@ -133,8 +133,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/creditCardNumber_TextInputLayout"
-            style="@style/turnKeyInput.Style"
-            android:theme="@style/turnKeyInput.Theme"
+            style="@style/turnkeyInput.Style"
+            android:theme="@style/turnkeyInput.Theme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -154,6 +154,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/creditCardNumber"
                 android:layout_width="match_parent"
+                android:longClickable="false"
+android:textIsSelectable="false"
                 android:layout_height="match_parent"
                 android:cursorVisible="true"
                 android:hint="@string/creditCardNumber"
@@ -170,10 +172,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
             android:layout_marginBottom="8dp"
             android:text="@string/dateExpire"
             android:textSize="@dimen/scale_14"
@@ -187,12 +187,11 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/creditCardYearInputLayout"
-            style="@style/turnKeyInput.Style"
-            android:theme="@style/turnKeyInput.Theme"
+            style="@style/turnkeyInput.Style"
+            android:theme="@style/turnkeyInput.Theme"
             android:layout_width="@dimen/scale_100_dim"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
             android:layout_marginEnd="@dimen/scale_16_dim"
             android:layout_marginBottom="@dimen/scale_24_dim"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -201,12 +200,13 @@
             app:layout_constraintStart_toEndOf="@+id/creditCardMonthInputLayout"
             app:layout_constraintTop_toBottomOf="@+id/cardDateExpire"
             app:layout_constraintVertical_bias="0.0"
-            android:layout_marginRight="@dimen/scale_16_dim"
             app:errorTextAppearance="@style/error_appearance">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/creditCardYear"
                 android:layout_width="match_parent"
+                android:longClickable="false"
+android:textIsSelectable="false"
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
                 android:cursorVisible="false"
@@ -228,8 +228,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/creditCardMonthInputLayout"
-            style="@style/turnKeyInput.Style"
-            android:theme="@style/turnKeyInput.Theme"
+            style="@style/turnkeyInput.Style"
+            android:theme="@style/turnkeyInput.Theme"
             android:layout_width="@dimen/scale_100_dim"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/scale_16_dim"
@@ -246,6 +246,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/creditCardMonth"
                 android:layout_width="match_parent"
+                android:longClickable="false"
+android:textIsSelectable="false"
                 android:layout_height="match_parent"
                 android:layout_gravity="start"
                 android:cursorVisible="false"
@@ -305,8 +307,8 @@
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/cvvNumber_TextInputLayout"
-            style="@style/turnKeyInput.Style"
-            android:theme="@style/turnKeyInput.Theme"
+            style="@style/turnkeyInput.Style"
+            android:theme="@style/turnkeyInput.Theme"
             android:layout_width="@dimen/scale_100_dim"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -326,6 +328,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/cvvNumberInput"
                 android:layout_width="match_parent"
+                android:longClickable="false"
+android:textIsSelectable="false"
                 android:layout_height="match_parent"
                 android:cursorVisible="true"
                 android:hint="@string/cvv"
@@ -340,7 +344,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/payCreditCard_btn"
-            style="@style/turnKeyButton.Style"
+            style="@style/turnkeyButton.Style"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/scale_16_dim"

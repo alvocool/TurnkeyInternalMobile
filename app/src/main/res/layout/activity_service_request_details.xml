@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".ui.servicerequestdetails.ServiceRequestDetailsActivity" >
+    tools:context="com.turnkeyafrica.bankassurance.ui.servicerequestdetails.ServiceRequestDetailsActivity" >
 
     <data>
 
@@ -10,7 +10,7 @@
 
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.servicerequestdetails.ServiceRequestDetailsViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.servicerequestdetails.ServiceRequestDetailsViewModel" />
 
     </data>
 

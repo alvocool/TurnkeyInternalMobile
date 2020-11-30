@@ -7,7 +7,7 @@
 
         <variable
             name="viewModel"
-            type="com.turnkeyafrica.turnkeybankassurance.ui.cardpayment.carddatesdialog.CardDatesViewModel" />
+            type="com.turnkeyafrica.bankassurance.ui.cardpayment.carddatesdialog.CardDatesViewModel" />
 
     </data>
 

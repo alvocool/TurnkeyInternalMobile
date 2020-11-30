@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.turnkeyafrica.bankassurance.ui.entersecurityquestions.EnterSecurityQuestionsActivity">
+
+    <data>
+
+        <import type="android.view.View" />
+        <variable
+            name="viewModel"
+            type="com.turnkeyafrica.bankassurance.ui.entersecurityquestions.EnterSecurityQuestionsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/questionsCard"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            app:layout_constrainedHeight="true"
+            android:translationZ="3dp"
+            android:focusable="true"
+            app:cardCornerRadius="@dimen/scale_16_dim"
+            android:clickable="true"
+            android:layout_marginTop="200dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout2"
+            app:layout_constraintVertical_bias="1.0">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/dash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="@dimen/scale_16_dim"
+                android:src="@drawable/ic_dash"
+                android:contentDescription="@string/dash" />
+
+            <ListView
+                android:id="@+id/questionsList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/Toolbar"
+                android:background="@color/white"
+                app:subtitleTextColor="@color/black"
+                app:title="@string/securityQuestion"
+                app:titleTextAppearance="@style/Toolbar.TitleText"
+                app:titleTextColor="@color/black" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/light_gray" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/stepContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBarLayout2">
+
+            <TextView
+                android:id="@+id/stepTitle"
+                style="@style/TextAppearance.Text.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/step_3_of_3"
+                android:textSize="@dimen/scale_12"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+
+            <ImageView
+                android:id="@+id/greyBar"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:contentDescription="@string/bar"
+                android:src="@drawable/grey_bar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stepTitle"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <ImageView
+                android:id="@+id/turnkeyBar"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="2dp"
+                android:contentDescription="@string/bar"
+                android:src="@drawable/turnkey_bar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stepTitle"
+                app:layout_constraintVertical_bias="1.0" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:paddingStart="@dimen/scale_16_dim"
+            android:paddingEnd="@dimen/scale_16_dim"
+            app:layout_constraintBottom_toTopOf="@+id/register_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/stepContainer">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/securityQuestionQ1"
+                    android:textSize="@dimen/scale_14" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/question_InputLayout"
+                    style="@style/turnkeyInput.Style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/scale_24_dim"
+                    android:layout_marginBottom="@dimen/scale_24_dim"
+                    android:theme="@style/turnkeyInput.Theme"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/question1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:cursorVisible="false"
+                        android:drawableEnd="@drawable/graphitedown"
+                        android:filterTouchesWhenObscured="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/question1"
+                        android:inputType="textCapCharacters"
+                        android:longClickable="false"
+                        android:onClick="@{() -> viewModel.ShowQuestions(1)}"
+                        android:paddingTop="@dimen/scale_14_dim"
+                        android:paddingBottom="@dimen/scale_14_dim"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colordark"
+                        android:textColorHint="@color/colordark"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/scale_15" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/answer1_InputLayout"
+                    style="@style/turnkeyInput.Style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/turnkeyInput.Theme"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/answer1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cursorVisible="true"
+                        android:hint="@string/answer"
+                        android:longClickable="false"
+                        android:paddingTop="@dimen/scale_14_dim"
+                        android:paddingBottom="@dimen/scale_14_dim"
+                        android:textColor="@color/colordark"
+                        android:textColorHint="@color/colordark"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/scale_15" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/question2_InputLayout"
+                    style="@style/turnkeyInput.Style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/scale_24_dim"
+                    android:layout_marginBottom="@dimen/scale_24_dim"
+                    android:theme="@style/turnkeyInput.Theme"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/question2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:cursorVisible="false"
+                        android:drawableEnd="@drawable/graphitedown"
+                        android:filterTouchesWhenObscured="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/question2"
+                        android:inputType="textCapCharacters"
+                        android:longClickable="false"
+                        android:onClick="@{() -> viewModel.ShowQuestions(2)}"
+                        android:paddingTop="@dimen/scale_14_dim"
+                        android:paddingBottom="@dimen/scale_14_dim"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colordark"
+                        android:textColorHint="@color/colordark"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/scale_15" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/answer2_InputLayout"
+                    style="@style/turnkeyInput.Style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/turnkeyInput.Theme"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/answer2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cursorVisible="true"
+                        android:hint="@string/answer"
+                        android:longClickable="false"
+                        android:paddingTop="@dimen/scale_14_dim"
+                        android:paddingBottom="@dimen/scale_14_dim"
+                        android:textColor="@color/colordark"
+                        android:textColorHint="@color/colordark"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/scale_15" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/question3_InputLayout"
+                    style="@style/turnkeyInput.Style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/scale_24_dim"
+                    android:layout_marginBottom="@dimen/scale_24_dim"
+                    android:theme="@style/turnkeyInput.Theme"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/question3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="start"
+                        android:cursorVisible="false"
+                        android:drawableEnd="@drawable/graphitedown"
+                        android:filterTouchesWhenObscured="true"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/question3"
+                        android:inputType="textCapCharacters"
+                        android:longClickable="false"
+                        android:onClick="@{() -> viewModel.ShowQuestions(3)}"
+                        android:paddingTop="@dimen/scale_14_dim"
+                        android:paddingBottom="@dimen/scale_14_dim"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/colordark"
+                        android:textColorHint="@color/colordark"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/scale_15" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/answer3_InputLayout"
+                    style="@style/turnkeyInput.Style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/turnkeyInput.Theme"
+                    app:errorTextAppearance="@style/error_appearance">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/answer3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:cursorVisible="true"
+                        android:hint="@string/answer"
+                        android:longClickable="false"
+                        android:paddingTop="@dimen/scale_14_dim"
+                        android:paddingBottom="@dimen/scale_14_dim"
+                        android:textColor="@color/colordark"
+                        android:textColorHint="@color/colordark"
+                        android:textIsSelectable="false"
+                        android:textSize="@dimen/scale_15" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/register_btn"
+            style="@style/turnkeyButton.Style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:paddingTop="@dimen/scale_15_dim"
+            android:paddingBottom="@dimen/scale_15_dim"
+            android:layout_marginBottom="16dp"
+            android:filterTouchesWhenObscured="true"
+            android:onClick="@{() -> viewModel.Register()}"
+
+            android:text="@string/register"
+            android:textColor="@color/colorlight"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
