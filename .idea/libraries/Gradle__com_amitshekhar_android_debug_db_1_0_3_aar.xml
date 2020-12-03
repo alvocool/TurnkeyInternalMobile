@@ -4,6 +4,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e0f3820bd200a518dd3c9ec9c2662b1f/jetified-debug-db-1.0.3/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e0f3820bd200a518dd3c9ec9c2662b1f/jetified-debug-db-1.0.3/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/e0f3820bd200a518dd3c9ec9c2662b1f/jetified-debug-db-1.0.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c54e782b60fdeef0e064b1e82b31789/jetified-debug-db-1.0.3/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c54e782b60fdeef0e064b1e82b31789/jetified-debug-db-1.0.3/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8c54e782b60fdeef0e064b1e82b31789/jetified-debug-db-1.0.3/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.amitshekhar.android/debug-db/1.0.3/7c4ffb9977a8638fe5f43507ea6f5f08b8a67ef2/debug-db-1.0.3-javadoc.jar!/" />

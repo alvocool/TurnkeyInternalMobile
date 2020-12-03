@@ -4,6 +4,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a0a2bb36db1528697fb6a987d1871b4d/jetified-appcenter-analytics-2.0.0/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a0a2bb36db1528697fb6a987d1871b4d/jetified-appcenter-analytics-2.0.0/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/a0a2bb36db1528697fb6a987d1871b4d/jetified-appcenter-analytics-2.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bff596bcb2a7c191713465eb87b4678f/jetified-appcenter-analytics-2.0.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bff596bcb2a7c191713465eb87b4678f/jetified-appcenter-analytics-2.0.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/bff596bcb2a7c191713465eb87b4678f/jetified-appcenter-analytics-2.0.0/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.microsoft.appcenter/appcenter-analytics/2.0.0/cc244fb7de80b0f902b1f822b84f08fae2e35a6a/appcenter-analytics-2.0.0-javadoc.jar!/" />

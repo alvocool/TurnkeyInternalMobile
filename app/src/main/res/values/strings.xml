@@ -13,7 +13,7 @@
 
     <string name="sessionExpired">Session Expired. Login to continue</string>
     <!--CopyRight-->
-    <string name="copyright">©2020 KenIndia Group. All rights reserved.</string>
+    <string name="copyright">©2020 Turnkey Group. All rights reserved.</string>
 
 
     <!--SplashScreen-->
@@ -504,7 +504,7 @@ Tempus iaculis urna id volutpat. Blandit aliquam etiam erat velit. Arcu vitae el
     <string name="dash">Dash</string>
     <string name="questionExistsError">Question already exists.</string>
     <string name="required">Field is required.</string>
-    <string name="turnkeybankassurance">KenIndia  Insurance</string>
+    <string name="turnkeybankassurance">TurnQuest Digital</string>
     <string name="error_invalid_mobile">Invalid Mobile Number.</string>
     <string name="errorSecurityQuestion">Enter the answer to the question.</string>
     <string name="okay">Okay</string>

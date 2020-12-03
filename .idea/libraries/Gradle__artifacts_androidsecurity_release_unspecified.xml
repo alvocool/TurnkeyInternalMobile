@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: artifacts:androidsecurity-release:unspecified">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/androidsecurity-release/build/.transforms/0efe57c84d667e819ce0cc14a3e3a652/jetified-androidsecurity-release/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/androidsecurity-release/build/.transforms/0efe57c84d667e819ce0cc14a3e3a652/jetified-androidsecurity-release/res" />
+      <root url="file://$PROJECT_DIR$/androidsecurity-release/build/.transforms/0efe57c84d667e819ce0cc14a3e3a652/jetified-androidsecurity-release/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

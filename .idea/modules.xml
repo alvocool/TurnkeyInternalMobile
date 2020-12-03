@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/AbsaMobileAppSecurity/AbsaMobileAppSecurity.iml" filepath="$PROJECT_DIR$/.idea/modules/AbsaMobileAppSecurity/AbsaMobileAppSecurity.iml" group="TurnkeyInternalMobile/AbsaMobileAppSecurity" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/TurnkeyInternalMobile.iml" filepath="$PROJECT_DIR$/.idea/modules/TurnkeyInternalMobile.iml" group="TurnkeyInternalMobile" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="TurnkeyInternalMobile/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Turnkey_BankAssurance.iml" filepath="$PROJECT_DIR$/.idea/modules/Turnkey_BankAssurance.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/androidsecurity-release/Turnkey_BankAssurance.androidsecurity-release.iml" filepath="$PROJECT_DIR$/.idea/modules/androidsecurity-release/Turnkey_BankAssurance.androidsecurity-release.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Turnkey_BankAssurance.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Turnkey_BankAssurance.app.iml" />
     </modules>
   </component>
 </project>
